@@ -110,10 +110,6 @@ Route::get('trading', function(){
     return view('home.about');
 });
 
-Route::get('terms', function(){
-    return view('home.terms');
-});
-
 Route::get('index', function(){
     return view('home.index');
 });

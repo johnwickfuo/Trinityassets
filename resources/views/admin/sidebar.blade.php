@@ -25,6 +25,34 @@
                 </li>
 
                 @if (Auth('admin')->User()->type == 'Super Admin' || Auth('admin')->User()->type == 'Admin')
+                <li class="nav-item {{ request()->routeIs('admin.nfts.create', 'admin.nfts.store') ? 'active' : '' }}">
+                    <a href="{{ route('admin.nfts.create') }}">
+                        <i class="fas fa-image"></i>
+                        <p>Upload NFT</p>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->routeIs('admin.nfts.manage', 'admin.nfts.update', 'admin.nfts.bids.*', 'admin.nfts.automatic-bids') ? 'active' : '' }}">
+                    <a href="{{ route('admin.nfts.manage') }}">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Manage NFTs</p>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->routeIs('admin.popup-notifications.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.popup-notifications.index') }}">
+                        <i class="fas fa-bell"></i>
+                        <p>Send Notification</p>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->routeIs('admin.nft-conversions.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.nft-conversions.index') }}">
+                        <i class="fas fa-exchange-alt"></i>
+                        <p>NFT Conversions</p>
+                    </a>
+                </li>
+
                   <li
                         class="nav-item {{ request()->routeIs('manageusers') ? 'active' : '' }} {{ request()->routeIs('loginactivity') ? 'active' : '' }} {{ request()->routeIs('user.plans') ? 'active' : '' }} {{ request()->routeIs('viewuser') ? 'active' : '' }}">
                         <a href="{{ url('/admin/dashboard/manageusers') }}">
@@ -46,6 +74,13 @@
                         <a href="{{ url('/admin/dashboard/mwithdrawals') }}">
                             <i class="fa fa-arrow-alt-circle-up" aria-hidden="true"></i>
                             <p>Manage Withdrawal</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item {{ request()->routeIs('admin.withdrawal-access.*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.withdrawal-access.index') }}">
+                            <i class="fas fa-user-shield" aria-hidden="true"></i>
+                            <p>Withdrawal Access</p>
                         </a>
                     </li>
 

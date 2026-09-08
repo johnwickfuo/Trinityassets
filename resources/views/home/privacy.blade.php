@@ -98,8 +98,8 @@
                 <p class="text-gray-400">Questions about privacy? Get in touch</p>
             </a>
             <a href="/register" class="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors duration-300 group">
-                <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-blue-400">Start Trading</h3>
-                <p class="text-gray-400">Create an account to begin trading</p>
+                <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-blue-400">Explore Art NFTs</h3>
+                <p class="text-gray-400">Create an account to explore digital art NFT investment</p>
             </a>
         </div>
     </div>

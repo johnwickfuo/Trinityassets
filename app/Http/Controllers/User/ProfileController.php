@@ -7,20 +7,38 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Support\SupportedCurrencies;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
     //Updating Profile Route
     public function updateprofile(Request $request)
     {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'dob' => ['nullable', 'date'],
+            'phone' => ['required', 'string', 'max:50'],
+            'address' => ['nullable', 'string', 'max:1000'],
+            'country' => ['required', 'string', 'max:191'],
+            'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
+        ]);
+        $currency = SupportedCurrencies::get($data['currency_code']);
         User::where('id', Auth::user()->id)
             ->update([
-                'name' => $request->name,
-                'dob' => $request->dob,
-                'phone' => $request->phone,
-                'address' => $request->address,
+                'name' => $data['name'],
+                'dob' => $data['dob'] ?? null,
+                'phone' => $data['phone'],
+                'address' => $data['address'] ?? null,
+                'country' => $data['country'],
+                'currency' => $currency['symbol'],
+                's_currency' => $data['currency_code'],
             ]);
-        return response()->json(['status' => 200, 'success' => 'Profile Information Updated Sucessfully!']);
+        if ($request->expectsJson()) {
+            return response()->json(['status' => 200, 'success' => 'Profile information updated successfully.']);
+        }
+
+        return redirect()->back()->with('success', 'Profile information updated successfully.');
     }
 
     //update account and contact info

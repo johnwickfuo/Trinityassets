@@ -44,7 +44,7 @@
                 <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">We're Here to Help</span>
             </h1>
             <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-300">
-                Have questions about trading? Our multilingual support team is available to assist you 24/7.
+                Have a question about digital art NFT investment? Contact our team for help with the platform, your account or the information you need.
             </p>
         </div>
     </div>
@@ -60,7 +60,7 @@
                     <div class="p-6 md:p-8">
                         <h2 class="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
 
-                        <form method="post" enctype="text/plain" x-data="{ formType: 'Trading Question', name: '', email: '', message: '' }">
+                        <form method="post" enctype="text/plain" x-data="{ formType: 'NFT Investment Question', name: '', email: '', message: '' }">
                             <div class="space-y-6">
                                 <!-- Select Type -->
                                 <div>
@@ -70,8 +70,8 @@
                                         class="w-full bg-gray-700 border border-gray-600 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                         id="select"
                                         name="question">
-                                        <option value="Trading Question">Trading Question</option>
-                                        <option value="Finance Question">Finance Question</option>
+                                        <option value="NFT Investment Question">NFT Investment Question</option>
+                                        <option value="Account & Funding Question">Account & Funding Question</option>
                                         <option value="Technical Question">Technical Question</option>
                                     </select>
                                 </div>
@@ -128,7 +128,7 @@
                                         Send Message
                                     </a>
                                     <p class="mt-3 text-xs text-gray-400 text-center">
-                                        Your information is secure and encrypted
+                                        Please do not include passwords or private wallet keys
                                     </p>
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
                                 <h3 class="text-xl font-semibold text-white">Customer Support</h3>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Our multilingual support team is ready to assist you with any questions or concerns.
+                                Our team can help with questions about digital art NFT investment and your account.
                             </p>
                             <div class="flex items-center text-blue-400 hover:text-blue-300 transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -425,7 +425,7 @@
             <h2 class="text-3xl font-bold text-white">Frequently Asked Questions</h2>
             <div class="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-blue-500 to-teal-400"></div>
             <p class="mt-4 max-w-3xl mx-auto text-gray-300">
-                Find answers to common questions about our services and support
+                Find answers to common questions about art NFTs, your account and support
             </p>
         </div>
 

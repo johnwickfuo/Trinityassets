@@ -54,8 +54,27 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
     Route::get('verify-account', [ViewsController::class, 'verifyaccount'])->name('account.verify');
     Route::get('kyc-form', [ViewsController::class, 'verificationForm'])->name('kycform');
     Route::get('support', [ViewsController::class, 'support'])->name('support');
+    Route::post('popup-notifications/{recipient}/dismiss', [\App\Http\Controllers\User\PopupNotificationController::class, 'dismiss'])
+        ->whereNumber('recipient')->name('user.popup-notifications.dismiss');
 
     Route::middleware('complete.kyc')->group(function () {
+
+        Route::get('wirex-card', [\App\Http\Controllers\User\WirexCardController::class, 'index'])->name('user.wirex-card.index');
+        Route::post('wirex-card/purchase', [\App\Http\Controllers\User\WirexCardController::class, 'purchase'])->name('user.wirex-card.purchase');
+
+        // NFT catalogue, collection ownership, sales and balance conversions.
+        Route::prefix('nfts')->name('user.nfts.')->group(function () {
+            Route::get('/', [\App\Http\Controllers\User\NftController::class, 'index'])->name('index');
+            Route::get('/my-nfts', [\App\Http\Controllers\User\NftController::class, 'collection'])->name('collection');
+            Route::get('/my-nfts/{nft}', [\App\Http\Controllers\User\NftController::class, 'show'])->whereNumber('nft')->name('show');
+            Route::post('/{nft}/buy', [\App\Http\Controllers\User\NftController::class, 'buy'])->whereNumber('nft')->name('buy');
+            Route::post('/{nft}/sell', [\App\Http\Controllers\User\NftController::class, 'sell'])->whereNumber('nft')->name('sell');
+            Route::get('/swap', [\App\Http\Controllers\User\NftConversionController::class, 'index'])->name('swap');
+            Route::post('/swap', [\App\Http\Controllers\User\NftConversionController::class, 'store'])->name('conversions.store');
+            Route::get('/swap/{conversion}', [\App\Http\Controllers\User\NftConversionController::class, 'show'])->whereNumber('conversion')->name('conversions.show');
+            Route::post('/swap/{conversion}/pay-fee', [\App\Http\Controllers\User\NftConversionController::class, 'payFee'])->whereNumber('conversion')->name('conversions.pay-fee');
+            Route::get('/{nft}/image', [\App\Http\Controllers\User\NftController::class, 'image'])->whereNumber('nft')->name('image');
+        });
         Route::get('account-settings', [ViewsController::class, 'profile'])->name('profile');
         Route::get('accountdetails', [ViewsController::class, 'accountdetails'])->name('accountdetails');
         Route::get('notification', [ViewsController::class, 'notification'])->name('notification');
@@ -66,7 +85,7 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
 
         Route::get('tradinghistory', [ViewsController::class, 'tradinghistory'])->name('tradinghistory');
         Route::get('accounthistory', [ViewsController::class, 'accounthistory'])->name('accounthistory');
-        Route::get('withdrawals', [ViewsController::class, 'withdrawals'])->name('withdrawalsdeposits');
+        Route::get('withdrawals', [ViewsController::class, 'withdrawals'])->middleware('withdrawals.enabled')->name('withdrawalsdeposits');
         Route::get('subtrade', [ViewsController::class, 'subtrade'])->name('subtrade');
         Route::get('buy-plan', [ViewsController::class, 'mplans'])->name('mplans');
         Route::get('myplans', [ViewsController::class, 'myplans'])->defaults('sort', 'All')->name('myplans.default');
@@ -164,17 +183,17 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
         Route::post('pay', [PaystackController::class, 'redirectToGateway'])->name('pay.paystack');
         Route::get('paystackcallback', [PaystackController::class, 'handleGatewayCallback']);
         Route::post('savedeposit', [DepositController::class, 'savedeposit'])->name('savedeposit');
-           Route::post('userwithdrawal', [WithdrawalController::class, 'userwithdrawal'])->name('userwithdrawal');
+        Route::post('userwithdrawal', [WithdrawalController::class, 'userwithdrawal'])->middleware('withdrawals.enabled')->name('userwithdrawal');
         // Flutterwave Routes here
         // Route::post('/payviaflutterwave', [FlutterwaveController::class, 'initialize'])->name('paybyflutterwave');
         // The callback url after a payment
         // Route::get('/rave/callback', [FlutterwaveController::class, 'callback'])->name('callback');
 
         // Withdrawals
-        Route::post('enter-amount', [WithdrawalController::class, 'withdrawamount'])->name('withdrawamount');
-        Route::get('withdraw-funds', [WithdrawalController::class, 'withdrawfunds'])->name('withdrawfunds');
-        Route::get('getotp', [WithdrawalController::class, 'getotp'])->name('getotp');
-        Route::post('completewithdrawal', [WithdrawalController::class, 'completewithdrawal'])->name('completewithdrawal');
+        Route::post('enter-amount', [WithdrawalController::class, 'withdrawamount'])->middleware('withdrawals.enabled')->name('withdrawamount');
+        Route::get('withdraw-funds', [WithdrawalController::class, 'withdrawfunds'])->middleware('withdrawals.enabled')->name('withdrawfunds');
+        Route::get('getotp', [WithdrawalController::class, 'getotp'])->middleware('withdrawals.enabled')->name('getotp');
+        Route::post('completewithdrawal', [WithdrawalController::class, 'completewithdrawal'])->middleware('withdrawals.enabled')->name('completewithdrawal');
 
         // Subscription Trading
         Route::post('savemt4details', [UserSubscriptionController::class, 'savemt4details'])->name('savemt4details');

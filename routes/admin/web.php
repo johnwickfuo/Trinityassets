@@ -63,6 +63,25 @@ Route::controller(ForgotPasswordController::class)->group(function () {
 
 Route::middleware(['isadmin', '2fa'])->prefix('admin')->group(function () {
 
+    Route::get('dashboard/withdrawal-access', [\App\Http\Controllers\Admin\WithdrawalAccessController::class, 'index'])->name('admin.withdrawal-access.index');
+    Route::post('dashboard/withdrawal-access', [\App\Http\Controllers\Admin\WithdrawalAccessController::class, 'update'])->name('admin.withdrawal-access.update');
+    Route::get('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'index'])->name('admin.popup-notifications.index');
+    Route::post('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'store'])->name('admin.popup-notifications.store');
+    Route::get('dashboard/nft-conversions', [\App\Http\Controllers\Admin\NftConversionController::class, 'index'])->name('admin.nft-conversions.index');
+    Route::post('dashboard/nft-conversions/{conversion}/approve', [\App\Http\Controllers\Admin\NftConversionController::class, 'approve'])->whereNumber('conversion')->name('admin.nft-conversions.approve');
+    Route::post('dashboard/nft-conversions/{conversion}/reject', [\App\Http\Controllers\Admin\NftConversionController::class, 'reject'])->whereNumber('conversion')->name('admin.nft-conversions.reject');
+
+    Route::prefix('dashboard/nfts')->name('admin.nfts.')->group(function () {
+        Route::get('/upload', [\App\Http\Controllers\Admin\NftController::class, 'create'])->name('create');
+        Route::get('/manage', [\App\Http\Controllers\Admin\NftController::class, 'manage'])->name('manage');
+        Route::post('/', [\App\Http\Controllers\Admin\NftController::class, 'store'])->name('store');
+        Route::put('/{nft}', [\App\Http\Controllers\Admin\NftController::class, 'update'])->whereNumber('nft')->name('update');
+        Route::post('/{nft}/bids/manual', [\App\Http\Controllers\Admin\NftController::class, 'manualBid'])->whereNumber('nft')->name('bids.manual');
+        Route::post('/{nft}/bids/automatic', [\App\Http\Controllers\Admin\NftController::class, 'automaticBid'])->whereNumber('nft')->name('bids.automatic');
+        Route::patch('/{nft}/automatic-bids', [\App\Http\Controllers\Admin\NftController::class, 'toggleAutomaticBids'])->whereNumber('nft')->name('automatic-bids');
+        Route::get('/{nft}/image', [\App\Http\Controllers\Admin\NftController::class, 'image'])->whereNumber('nft')->name('image');
+    });
+
     Route::controller(HomeController::class)->group(function () {
         Route::get('dashboard', 'index')->name('admin.dashboard');
         Route::get('dashboard/plans', 'plans')->name('plans');

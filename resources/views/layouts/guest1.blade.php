@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $settings->site_name }} - @yield('title', 'Secure Trading Platform')</title>
+    <title>{{ $settings->site_name }} - @yield('title', 'Digital Art NFT Investment')</title>
 
     <!-- Favicon -->
     <link href="{{ asset('storage/app/public/'.$settings->favicon)}}" rel="icon" type="image/x-icon" />
@@ -149,29 +149,9 @@
 
 
 <meta property="og:site_name" content="{{$settings->site_name }}">
-<meta property="og:title" content="Trading With {{$settings->site_name }}" />
-<meta name="description" content="{{$settings->site_name }} LIMITED???
-INVEST IN A LEADING
-TRADE AND INVESTMENT
-COMPANY, OPERATING IN
-THE UK.
-SERVICES INCLUDE: FOREX TRADING
-CRYPTOCURRENCIES, STOCKS & COMMODITIES INVESTMENTS. OIL & GAS, REAL ESTATE INVESTMENTS, MARKET
-RESEARCH AND ANALYSIS:
-ASSISTING BOTH INDIVIDUALS & COMPANIES INVEST IN THE
-COMMERCIAL MARKET.TRAINING CLIENTS & INVESTORS TO BECOME
-EXPERTISE.???">
-<meta property="og:description" content="{{$settings->site_name }} LIMITED???
-INVEST IN A LEADING
-TRADE AND INVESTMENT
-COMPANY, OPERATING IN
-THE UK.
-SERVICES INCLUDE: FOREX TRADING
-CRYPTOCURRENCIES, STOCKS & COMMODITIES INVESTMENTS. OIL & GAS, REAL ESTATE INVESTMENTS, MARKET
-RESEARCH AND ANALYSIS:
-ASSISTING BOTH INDIVIDUALS & COMPANIES INVEST IN THE
-COMMERCIAL MARKET.TRAINING CLIENTS & INVESTORS TO BECOME
-EXPERTISE.???">
+<meta property="og:title" content="NFT Investment with {{$settings->site_name }}" />
+<meta name="description" content="Explore digital art NFT investment with {{$settings->site_name }}. Sign in or create an account to begin.">
+<meta property="og:description" content="Explore digital art NFT investment with {{$settings->site_name }}. Sign in or create an account to begin.">
 <meta property="og:type" content="website" />
 
 

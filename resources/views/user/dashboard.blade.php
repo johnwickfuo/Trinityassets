@@ -125,6 +125,11 @@
                 <h3 id="hiddenBalance" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mr-2 hidden">••••••</h3>
             </div>
 
+            <a href="{{ route('user.nfts.collection') }}" class="mb-4 flex items-center justify-between rounded-xl bg-blue-50 dark:bg-blue-900/20 px-4 py-3 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition">
+                <span class="flex items-center text-sm font-medium"><i data-lucide="image" class="w-4 h-4 mr-2"></i>NFT Balance</span>
+                <strong>{{ Auth::user()->currency }}{{ number_format(Auth::user()->nft_balance, 2, '.', ',') }}</strong>
+            </a>
+
             <div class="inline-flex items-center px-2 py-1 text-xs rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 mb-4 w-fit mx-auto sm:mx-0">
                 <i data-lucide="check-circle" class="w-3 h-3 mr-1"></i> Available for Withdrawal
             </div>
@@ -159,6 +164,9 @@
                 </a>
                 <a href="{{ route('withdrawalsdeposits') }}" class="flex items-center justify-center w-full gap-1 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition">
                     <i data-lucide="arrow-up-right" class="w-4 h-4"></i> Withdraw
+                </a>
+                <a href="{{ route('user.nfts.swap') }}" class="flex items-center justify-center w-full gap-1 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white transition">
+                    <i data-lucide="repeat-2" class="w-4 h-4"></i> Swap NFT
                 </a>
             </div>
         </div>

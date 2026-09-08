@@ -43,12 +43,14 @@
                                             @else
                                                     <td>User deleted.</td>
                                                 @endif
-                                            <td>{{ $settings->currency }}{{ number_format($deposit->amount) }}</td>
+                                            <td>{{ optional($deposit->duser)->currency ?? $settings->currency }}{{ number_format($deposit->amount) }}</td>
                                             <td>{{ $deposit->payment_mode }}</td>
 
                                             <td>
                                                 
-                                                @if ($deposit->signals ==Null)
+                                                @if ($deposit->purpose === 'wirex_card')
+                                                <span class="badge badge-info">Wirex Card</span><br><small>{{ $deposit->purpose_reference }}</small>
+                                                @elseif ($deposit->signals ==Null)
                                                 Deposit Payment
                                                 @else
                                                Siginal Payment

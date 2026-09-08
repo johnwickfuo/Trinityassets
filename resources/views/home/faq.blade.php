@@ -43,9 +43,7 @@
                 <span class="block">Frequently Asked Questions</span>
                 <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">All You Need to Know</span>
             </h1>
-            <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-300">
-                Get answers to common questions about our trading platform and services
-            </p>
+            <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-300">Find answers about digital art NFTs, investment concepts and your account.</p>
         </div>
     </div>
 </section>
@@ -70,7 +68,7 @@
                     <i class="fas fa-money-bill-wave mr-2"></i>Withdrawal
                 </button>
                 <button @click="activeCategory = 'referral'" :class="{'bg-blue-600 text-white': activeCategory === 'referral', 'bg-gray-800 text-gray-300 hover:bg-gray-700': activeCategory !== 'referral'}" class="px-4 py-2 rounded-lg transition-all duration-200 text-sm md:text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
-                    <i class="fas fa-users mr-2"></i>Referral
+                    <i class="fas fa-users mr-2"></i>Art & Ownership
                 </button>
                 <button @click="activeCategory = 'other'" :class="{'bg-blue-600 text-white': activeCategory === 'other', 'bg-gray-800 text-gray-300 hover:bg-gray-700': activeCategory !== 'other'}" class="px-4 py-2 rounded-lg transition-all duration-200 text-sm md:text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
                     <i class="fas fa-question-circle mr-2"></i>Other
@@ -92,31 +90,31 @@
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>{{$settings->site_name}} - Professional team of cryptocurrency industry developers. The main advantage of the company is a unique trading bot that makes a profit at the stage of growth and market decline.</p>
+                                <p>{{$settings->site_name}} is focused on digital art NFT investment, with an emphasis on the artwork, the creator and the context behind digital ownership.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Is {{$settings->site_name}} an officially registered company?</h4>
+                                <h4 class="text-lg font-medium text-white">What is a digital art NFT?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Yes, we are legally binding and officially registered in the UK under the company registration number #08683932</p>
+                                <p>An NFT is a distinct token recorded on a blockchain. An art NFT can be associated with a digital work or an edition within a collection.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 2 ? active = 2 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Do you have any country restrictions?</h4>
+                                <h4 class="text-lg font-medium text-white">What kinds of digital art can be associated with NFTs?</h4>
                                 <svg :class="{'rotate-180': active === 2}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 2" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Our company doesn't work and doesn't accept deposits from US residents. During the registration process you need to check the box that you are not a US citizen.</p>
+                                <p>Digital painting, illustration, photography, animation and generative art are examples. The collection details explain the particular work associated with a token.</p>
                             </div>
                         </div>
                     </div>
@@ -132,69 +130,69 @@
                         <!-- Account Questions -->
                         <div class="py-4">
                             <button @click="active !== 0 ? active = 0 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How many accounts can I open?</h4>
+                                <h4 class="text-lg font-medium text-white">How do I create an account?</h4>
                                 <svg :class="{'rotate-180': active === 0}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Each user can only open and manage one account. Please follow this rule. In case of violation the company has the right to block all your accounts without a refund.</p>
+                                <p>Choose Create Account and complete the registration form with your own details. You can then sign in to explore your account.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How to upload personal data?</h4>
+                                <h4 class="text-lg font-medium text-white">Where do I manage my account details?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Please note that we do not require your personal information. To work with our platform, you need to specify your login, your email, come up with a password, and also specify the wallet number to which funds will be withdrawn from the platform.</p>
+                                <p>Sign in and open your account settings to review your information. Contact support if you need help with a required update.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 2 ? active = 2 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How much does it cost to open an account?</h4>
+                                <h4 class="text-lg font-medium text-white">What should I review before investing?</h4>
                                 <svg :class="{'rotate-180': active === 2}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 2" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Opening an account is absolutely free. We do not charge you any hidden fees or service charges. The commission on operations and additional costs is included in the company's profits from the profits from the development of cryptocurrency robots.</p>
+                                <p>Read the opportunity details, applicable costs, duration and participation terms. Understand what your investment represents and ask questions before committing funds.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 3 ? active = 3 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Can I register my child?</h4>
+                                <h4 class="text-lg font-medium text-white">Where can I learn about NFTs?</h4>
                                 <svg :class="{'rotate-180': active === 3}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 3" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Any person who has reached the age of majority in their country of residence can register in {{$settings->site_name}}</p>
+                                <p>Visit our NFT Education page for an introduction to digital art, tokens, provenance and ownership rights.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 4 ? active = 4 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How to become an investor?</h4>
+                                <h4 class="text-lg font-medium text-white">How do I get started?</h4>
                                 <svg :class="{'rotate-180': active === 4}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 4" x-collapse x-cloak class="mt-3 text-gray-300">
                                 <div class="space-y-4">
-                                    <p class="font-medium">3 steps to get started with our company:</p>
+                                    <p class="font-medium">Three steps to begin exploring:</p>
                                     <div class="flex items-start">
                                         <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center mr-3">
                                             <span class="text-white font-bold">1</span>
                                         </div>
                                         <div>
-                                            <p class="font-medium text-white">REGISTRATION</p>
-                                            <p>Click the Register button. Enter your details to quickly create a FREE {{$settings->site_name}} account.</p>
+                                            <p class="font-medium text-white">CREATE AN ACCOUNT</p>
+                                            <p>Use the registration page to create your {{$settings->site_name}} account.</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
@@ -202,8 +200,8 @@
                                             <span class="text-white font-bold">2</span>
                                         </div>
                                         <div>
-                                            <p class="font-medium text-white">OPEN A DEPOSIT</p>
-                                            <p>We offer different investment plans. You need to choose a plan that suits your financial goals. Make a deposit after reading.</p>
+                                            <p class="font-medium text-white">EXPLORE DIGITAL ART</p>
+                                            <p>Learn about art NFTs and review the information for any investment that interests you.</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
@@ -211,8 +209,8 @@
                                             <span class="text-white font-bold">3</span>
                                         </div>
                                         <div>
-                                            <p class="font-medium text-white">START EARNING</p>
-                                            <p>After depositing, watch your capital grow by accumulating daily profit in real time.</p>
+                                            <p class="font-medium text-white">REVIEW THE TERMS</p>
+                                            <p>Understand the details and decide whether the opportunity fits your goals.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -231,65 +229,39 @@
                         <!-- Deposit Questions -->
                         <div class="py-4">
                             <button @click="active !== 0 ? active = 0 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">What payment methods can I use to deposit?</h4>
+                                <h4 class="text-lg font-medium text-white">What payment methods can I use?</h4>
                                 <svg :class="{'rotate-180': active === 0}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>We work with payment systems <span class="font-semibold text-blue-300">PerfectMoney</span>, <span class="font-semibold text-blue-300">BitCoin</span>, <span class="font-semibold text-blue-300">Ethereum</span>, <span class="font-semibold text-blue-300">LiteCoin</span>, <span class="font-semibold text-blue-300">DogeCoin</span>, <span class="font-semibold text-blue-300">TRON</span>, <span class="font-semibold text-blue-300">Tether TRC20</span>, <span class="font-semibold text-blue-300">Tether ERC20</span></p>
+                                <p>Check the payment options currently displayed in your account. Review the currency, network and any instructions before making a payment.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Are there any restrictions on the amount of investment?</h4>
+                                <h4 class="text-lg font-medium text-white">Where can I find investment limits?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3">
-                                <p class="text-gray-300 mb-4">The tariff plans set the following restrictions on the minimum and maximum amount of the deposit:</p>
+                                <p class="text-gray-300 mb-4">The limits shown for each available plan are the relevant starting point. Review the current plan details in your account before proceeding.</p>
 
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                                    <div class="bg-gray-700 bg-opacity-50 rounded-lg p-3">
-                                        <h5 class="font-medium text-white mb-1">Minimum Amount:</h5>
-                                        <ul class="text-gray-300 space-y-1">
-                                            <li><span class="text-blue-300">10</span> USD</li>
-                                            <li><span class="text-blue-300">0.005</span> BTC</li>
-                                            <li><span class="text-blue-300">0.02</span> ETH</li>
-                                            <li><span class="text-blue-300">0.3</span> LTC</li>
-                                            <li><span class="text-blue-300">50</span> DOGE</li>
-                                            <li><span class="text-blue-300">100</span> TRX</li>
-                                            <li><span class="text-blue-300">10</span> USDT</li>
-                                        </ul>
-                                    </div>
 
-                                    <div class="bg-gray-700 bg-opacity-50 rounded-lg p-3">
-                                        <h5 class="font-medium text-white mb-1">Maximum Amount:</h5>
-                                        <ul class="text-gray-300 space-y-1">
-                                            <li><span class="text-blue-300">75000</span> USD</li>
-                                            <li><span class="text-blue-300">1.5</span> BTC</li>
-                                            <li><span class="text-blue-300">20</span> ETH</li>
-                                            <li><span class="text-blue-300">300</span> LTC</li>
-                                            <li><span class="text-blue-300">350000</span> DOGE</li>
-                                            <li><span class="text-blue-300">750000</span> TRX</li>
-                                            <li><span class="text-blue-300">75000</span> USDT</li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 2 ? active = 2 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Can I make multiple deposits at the same time?</h4>
+                                <h4 class="text-lg font-medium text-white">Does joining a plan mean I own an NFT?</h4>
                                 <svg :class="{'rotate-180': active === 2}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 2" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Yes, you can have an unlimited number of deposits, and you can also invest in different tariff plans at the same time.</p>
+                                <p>Not automatically. Read the specific plan terms to understand whether your participation includes ownership of a particular token or a different investment arrangement.</p>
                             </div>
                         </div>
                     </div>
@@ -305,88 +277,59 @@
                         <!-- Withdrawal Questions -->
                         <div class="py-4">
                             <button @click="active !== 0 ? active = 0 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How long does it take to process a withdrawal request?</h4>
+                                <h4 class="text-lg font-medium text-white">Where can I find withdrawal conditions?</h4>
                                 <svg :class="{'rotate-180': active === 0}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Withdrawal requests will be processed instantly. For payment systems <span class="font-semibold text-blue-300">PerfectMoney</span> - funds reach the wallet instantly, after ordering the payment in your account. Waiting time for funds to a wallet for payment systems <span class="font-semibold text-blue-300">BitCoin</span>, <span class="font-semibold text-blue-300">Ethereum</span>, <span class="font-semibold text-blue-300">LiteCoin</span>, <span class="font-semibold text-blue-300">DogeCoin</span>, <span class="font-semibold text-blue-300">TRON</span>, <span class="font-semibold text-blue-300">Tether TRC20</span>, <span class="font-semibold text-blue-300">Tether ERC20</span> - At least 3 network confirmations are required and this can take from 20 minutes to several hours.</p>
+                                <p>Review the withdrawal information displayed in your account, including the method, limits, fees and processing conditions. Contact support if anything is unclear.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">What is the minimum withdrawal amount?</h4>
+                                <h4 class="text-lg font-medium text-white">Is withdrawing account funds the same as selling an NFT?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3">
-                                <div class="bg-gray-700 bg-opacity-50 rounded-lg p-4">
-                                    <h5 class="font-medium text-white mb-2">Minimum Withdrawal Amounts:</h5>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">0.1</span> USD
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">0.002</span> BTC
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">0.03</span> ETH
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">0.1</span> LTC
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">60</span> DOGE
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">60</span> TRX
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">10</span> USDT (TRC20)
-                                        </div>
-                                        <div class="bg-gray-900 bg-opacity-70 p-2 rounded">
-                                            <span class="text-blue-300 font-medium">150</span> USDT (ERC20)
-                                        </div>
-                                    </div>
-                                    <p class="mt-3 text-gray-300">There are no restrictions on the maximum withdrawal amount, as well as the number of withdrawal operations per day.</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Referral Program Category -->
+            <!-- Art & Ownership Program Category -->
             <div x-show="activeCategory === 'referral'" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform -translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0"
                 x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform -translate-y-4"
                 class="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-xl overflow-hidden">
                 <div class="p-6 md:p-8">
                     <div class="divide-y divide-gray-700" x-data="{active: null}">
-                        <!-- Referral Questions -->
+                        <!-- Art & Ownership Questions -->
                         <div class="py-4">
                             <button @click="active !== 0 ? active = 0 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Do you offer a referral program?</h4>
+                                <h4 class="text-lg font-medium text-white">Does owning an NFT give me copyright?</h4>
                                 <svg :class="{'rotate-180': active === 0}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>We offer an affiliate program for additional income for our investors. Anyone can take part in the development of the company by inviting new members and receiving a generous reward for this.</p>
+                                <p>Not automatically. Copyright and token ownership are separate. Review the licence or associated terms for any rights to display, reproduce or use the artwork.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">How does the affiliate program work?</h4>
+                                <h4 class="text-lg font-medium text-white">What should I check about an artwork's ownership history?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3">
-                                <p class="text-gray-300">{{$settings->site_name}} offers a unique investment and referral program that rewards you not only for partners who came from you to the platform, but also for partners from levels 2,3 and 4. This unique affiliate program brings you passive referral income.</p>
+                                <p class="text-gray-300">Check the creator's official sources and the available token history. A blockchain record can trace a token, but it does not automatically prove that the underlying artwork is authentic.</p>
 
                                 <div class="mt-4 bg-gray-700 bg-opacity-50 p-4 rounded-xl">
                                     <h5 class="font-medium text-white mb-2">Affiliate Commission Structure:</h5>
@@ -424,25 +367,25 @@
                         <!-- Other Questions -->
                         <div class="py-4">
                             <button @click="active !== 0 ? active = 0 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">What to do if I forgot my password?</h4>
+                                <h4 class="text-lg font-medium text-white">What if I forget my password?</h4>
                                 <svg :class="{'rotate-180': active === 0}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 0" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>Click on the reset password link on the main page of the site in the login section. Enter your username and email address and follow the instructions. You will receive information on how to reset your {{$settings->site_name}} account password.</p>
+                                <p>Use the Forgot Password link on the login page and enter the email address associated with your account. Follow the reset instructions sent to you.</p>
                             </div>
                         </div>
 
                         <div class="py-4">
                             <button @click="active !== 1 ? active = 1 : active = null" class="flex justify-between items-center w-full focus:outline-none">
-                                <h4 class="text-lg font-medium text-white">Where can I exchange one currency for another?</h4>
+                                <h4 class="text-lg font-medium text-white">Where can I ask a question about NFT investment?</h4>
                                 <svg :class="{'rotate-180': active === 1}" class="w-5 h-5 text-blue-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak class="mt-3 text-gray-300">
-                                <p>You can use monitoring with trusted exchange offices - bestchange. Choose the exchanger with the best rate and follow the instructions.</p>
+                                <p>Use the Contact page to reach our team. Include the question and any relevant plan or collection details, without sharing your password.</p>
                             </div>
                         </div>
                     </div>
@@ -465,7 +408,7 @@
                     </div>
                     <h2 class="text-2xl md:text-3xl font-bold text-white">Still have questions?</h2>
                 </div>
-                <p class="text-gray-300 mb-6">Our support team is available 24/7 to help you with any questions or concerns you may have about our platform.</p>
+                <p class="text-gray-300 mb-6">Contact our team with questions about digital art NFT investment or your account.</p>
                 <div class="flex space-x-4 pt-2">
                     <a href="/contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
                         Contact Support
@@ -494,9 +437,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h2 class="text-2xl md:text-3xl font-bold text-white">Ready to start trading?</h2>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white">Ready to Explore Art NFTs?</h2>
                     </div>
-                    <p class="text-gray-300 mb-6">Create an account now and start earning with our innovative trading platform. It only takes a few minutes to get started!</p>
+                    <p class="text-gray-300 mb-6">Create an account and explore the world of digital art NFT investment with {{$settings->site_name}}.</p>
                     <div class="flex space-x-4 pt-2">
                         <a href="/register" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-900 bg-gradient-to-r from-blue-400 to-teal-400 hover:from-blue-500 hover:to-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
                             Create Account

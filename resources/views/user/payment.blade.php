@@ -252,6 +252,10 @@
                     <input type="hidden" name="amount" value="{{ $amount }}">
                     <input type="hidden" name="method" value="{{ $payment_mode->name }}">
                     <input type="hidden" name="paymethd_method" value="{{ $payment_mode->name }}">
+                    @if($purpose)
+                    <input type="hidden" name="purpose" value="{{ $purpose }}">
+                    <input type="hidden" name="purpose_reference" value="{{ $purposeReference }}">
+                    @endif
                     @if($asset)
                     <input type="hidden" name="asset" value="{{ $asset }}">
                     @endif
@@ -379,5 +383,4 @@
 </style>
 
 @endsection
-
 
