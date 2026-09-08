@@ -72,5 +72,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'complete.kyc' => \App\Http\Middleware\EnsureKycIsCompleted::class,
         'check.banned' => \App\Http\Middleware\CheckBannedUser::class,
+        'withdrawals.enabled' => \App\Http\Middleware\EnsureWithdrawalEnabled::class,
     ];
 }

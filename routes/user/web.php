@@ -85,7 +85,7 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
 
         Route::get('tradinghistory', [ViewsController::class, 'tradinghistory'])->name('tradinghistory');
         Route::get('accounthistory', [ViewsController::class, 'accounthistory'])->name('accounthistory');
-        Route::get('withdrawals', [ViewsController::class, 'withdrawals'])->name('withdrawalsdeposits');
+        Route::get('withdrawals', [ViewsController::class, 'withdrawals'])->middleware('withdrawals.enabled')->name('withdrawalsdeposits');
         Route::get('subtrade', [ViewsController::class, 'subtrade'])->name('subtrade');
         Route::get('buy-plan', [ViewsController::class, 'mplans'])->name('mplans');
         Route::get('myplans', [ViewsController::class, 'myplans'])->defaults('sort', 'All')->name('myplans.default');
@@ -183,17 +183,17 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
         Route::post('pay', [PaystackController::class, 'redirectToGateway'])->name('pay.paystack');
         Route::get('paystackcallback', [PaystackController::class, 'handleGatewayCallback']);
         Route::post('savedeposit', [DepositController::class, 'savedeposit'])->name('savedeposit');
-           Route::post('userwithdrawal', [WithdrawalController::class, 'userwithdrawal'])->name('userwithdrawal');
+        Route::post('userwithdrawal', [WithdrawalController::class, 'userwithdrawal'])->middleware('withdrawals.enabled')->name('userwithdrawal');
         // Flutterwave Routes here
         // Route::post('/payviaflutterwave', [FlutterwaveController::class, 'initialize'])->name('paybyflutterwave');
         // The callback url after a payment
         // Route::get('/rave/callback', [FlutterwaveController::class, 'callback'])->name('callback');
 
         // Withdrawals
-        Route::post('enter-amount', [WithdrawalController::class, 'withdrawamount'])->name('withdrawamount');
-        Route::get('withdraw-funds', [WithdrawalController::class, 'withdrawfunds'])->name('withdrawfunds');
-        Route::get('getotp', [WithdrawalController::class, 'getotp'])->name('getotp');
-        Route::post('completewithdrawal', [WithdrawalController::class, 'completewithdrawal'])->name('completewithdrawal');
+        Route::post('enter-amount', [WithdrawalController::class, 'withdrawamount'])->middleware('withdrawals.enabled')->name('withdrawamount');
+        Route::get('withdraw-funds', [WithdrawalController::class, 'withdrawfunds'])->middleware('withdrawals.enabled')->name('withdrawfunds');
+        Route::get('getotp', [WithdrawalController::class, 'getotp'])->middleware('withdrawals.enabled')->name('getotp');
+        Route::post('completewithdrawal', [WithdrawalController::class, 'completewithdrawal'])->middleware('withdrawals.enabled')->name('completewithdrawal');
 
         // Subscription Trading
         Route::post('savemt4details', [UserSubscriptionController::class, 'savemt4details'])->name('savemt4details');

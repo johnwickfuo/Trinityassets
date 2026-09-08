@@ -116,6 +116,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(WirexCardOrder::class);
     }
 
+    public function withdrawalRestriction()
+    {
+        return $this->hasOne(WithdrawalRestriction::class);
+    }
+
     public static function search($search): \Illuminate\Database\Eloquent\Builder
     {
         return empty($search) ? static::query()

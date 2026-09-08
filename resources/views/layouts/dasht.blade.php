@@ -1225,6 +1225,7 @@ s0.parentNode.insertBefore(s1,s0);
 </div>
 
 @include('layouts.partials.popup-notifications')
+@include('layouts.partials.withdrawal-blocked-popup')
 
 <!-- Script for Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>

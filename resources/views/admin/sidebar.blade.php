@@ -77,6 +77,13 @@
                         </a>
                     </li>
 
+                    <li class="nav-item {{ request()->routeIs('admin.withdrawal-access.*') ? 'active' : '' }}">
+                        <a href="{{ route('admin.withdrawal-access.index') }}">
+                            <i class="fas fa-user-shield" aria-hidden="true"></i>
+                            <p>Withdrawal Access</p>
+                        </a>
+                    </li>
+
                     <li
                         class="nav-item {{ request()->routeIs('admin.trades.*') ? 'active' : '' }}">
                         <a href="{{ route('admin.trades.index') }}">
