@@ -9,9 +9,16 @@ use Illuminate\Validation\ValidationException;
 
 class NftBidService
 {
+    private $emails;
+
+    public function __construct(NftEmailService $emails)
+    {
+        $this->emails = $emails;
+    }
+
     public function createAutomatic(Nft $nft): NftBid
     {
-        return DB::transaction(function () use ($nft) {
+        $result = DB::transaction(function () use ($nft) {
             $lockedNft = Nft::whereKey($nft->id)->lockForUpdate()->firstOrFail();
             $this->ensureOwned($lockedNft);
 
@@ -23,16 +30,22 @@ class NftBidService
 
             return $this->replaceCurrentBid($lockedNft, random_int($minimum, $maximum) / 100, 'automatic');
         });
+
+        $this->emails->bidReceived($result->nft->owner, $result->nft, $result);
+        return $result;
     }
 
     public function createManual(Nft $nft, $amount): NftBid
     {
-        return DB::transaction(function () use ($nft, $amount) {
+        $result = DB::transaction(function () use ($nft, $amount) {
             $lockedNft = Nft::whereKey($nft->id)->lockForUpdate()->firstOrFail();
             $this->ensureOwned($lockedNft);
 
             return $this->replaceCurrentBid($lockedNft, $amount, 'manual');
         });
+
+        $this->emails->bidReceived($result->nft->owner, $result->nft, $result);
+        return $result;
     }
 
     private function replaceCurrentBid(Nft $nft, $amount, string $source): NftBid

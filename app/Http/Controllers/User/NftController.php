@@ -8,6 +8,7 @@ use App\Models\NftBid;
 use App\Models\NftTransaction;
 use App\Models\Tp_Transaction;
 use App\Models\User;
+use App\Services\NftEmailService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -42,9 +43,9 @@ class NftController extends Controller
         return view('user.nfts.show', ['title' => $nft->name, 'nft' => $nft]);
     }
 
-    public function buy(Nft $nft)
+    public function buy(Nft $nft, NftEmailService $emails)
     {
-        DB::transaction(function () use ($nft) {
+        $purchase = DB::transaction(function () use ($nft) {
             $lockedNft = Nft::whereKey($nft->id)->lockForUpdate()->firstOrFail();
             $user = User::whereKey(Auth::id())->lockForUpdate()->firstOrFail();
             if (!$lockedNft->is_available || $lockedNft->owner_user_id) {
@@ -68,15 +69,19 @@ class NftController extends Controller
                 'nft_balance_after' => $user->nft_balance,
             ]);
             Tp_Transaction::create(['user' => $user->id, 'amount' => -((float) $lockedNft->price), 'type' => 'NFT Purchase']);
+
+            return ['user' => $user, 'nft' => $lockedNft];
         });
+
+        $emails->purchaseConfirmed($purchase['user'], $purchase['nft']);
 
         return redirect()->route('user.nfts.collection')->with('success', 'NFT purchased and added to your collection.');
     }
 
-    public function sell(Request $request, Nft $nft)
+    public function sell(Request $request, Nft $nft, NftEmailService $emails)
     {
         $data = $request->validate(['bid_id' => ['required', 'integer']]);
-        DB::transaction(function () use ($nft, $data) {
+        $sale = DB::transaction(function () use ($nft, $data) {
             $lockedNft = Nft::whereKey($nft->id)->lockForUpdate()->firstOrFail();
             $user = User::whereKey(Auth::id())->lockForUpdate()->firstOrFail();
             abort_unless((int) $lockedNft->owner_user_id === (int) $user->id, 403);
@@ -97,7 +102,11 @@ class NftController extends Controller
                 'type' => 'sale', 'amount' => $bid->amount, 'currency' => $bid->currency,
                 'nft_balance_after' => $user->nft_balance,
             ]);
+
+            return ['user' => $user, 'nft' => $lockedNft, 'bid' => $bid];
         });
+
+        $emails->saleConfirmed($sale['user'], $sale['nft'], $sale['bid']);
 
         return redirect()->route('user.nfts.collection')->with('success', 'NFT sold. The bid amount has been credited to your NFT balance.');
     }
