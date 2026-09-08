@@ -1217,6 +1217,8 @@ s0.parentNode.insertBefore(s1,s0);
   </style>
 </div>
 
+@include('layouts.partials.popup-notifications')
+
 <!-- Script for Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>

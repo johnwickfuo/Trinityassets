@@ -39,6 +39,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item {{ request()->routeIs('admin.popup-notifications.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.popup-notifications.index') }}">
+                        <i class="fas fa-bell"></i>
+                        <p>Send Notification</p>
+                    </a>
+                </li>
+
                   <li
                         class="nav-item {{ request()->routeIs('manageusers') ? 'active' : '' }} {{ request()->routeIs('loginactivity') ? 'active' : '' }} {{ request()->routeIs('user.plans') ? 'active' : '' }} {{ request()->routeIs('viewuser') ? 'active' : '' }}">
                         <a href="{{ url('/admin/dashboard/manageusers') }}">

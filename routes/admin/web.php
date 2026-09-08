@@ -63,6 +63,9 @@ Route::controller(ForgotPasswordController::class)->group(function () {
 
 Route::middleware(['isadmin', '2fa'])->prefix('admin')->group(function () {
 
+    Route::get('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'index'])->name('admin.popup-notifications.index');
+    Route::post('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'store'])->name('admin.popup-notifications.store');
+
     Route::prefix('dashboard/nfts')->name('admin.nfts.')->group(function () {
         Route::get('/upload', [\App\Http\Controllers\Admin\NftController::class, 'create'])->name('create');
         Route::get('/manage', [\App\Http\Controllers\Admin\NftController::class, 'manage'])->name('manage');

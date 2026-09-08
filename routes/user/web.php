@@ -54,6 +54,8 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
     Route::get('verify-account', [ViewsController::class, 'verifyaccount'])->name('account.verify');
     Route::get('kyc-form', [ViewsController::class, 'verificationForm'])->name('kycform');
     Route::get('support', [ViewsController::class, 'support'])->name('support');
+    Route::post('popup-notifications/{recipient}/dismiss', [\App\Http\Controllers\User\PopupNotificationController::class, 'dismiss'])
+        ->whereNumber('recipient')->name('user.popup-notifications.dismiss');
 
     Route::middleware('complete.kyc')->group(function () {
 
