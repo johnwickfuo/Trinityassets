@@ -291,6 +291,7 @@
                     <option selected disabled class="text-gray-400">Select your primary interest</option>
                     <option>Stocks</option>
                     <option>Cryptocurrency</option>
+                    <option>NFT</option>
                     <option>Venture Capital</option>
                     <option>Real Estate</option>
                 </select>
