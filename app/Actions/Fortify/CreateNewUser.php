@@ -4,15 +4,10 @@ namespace App\Actions\Fortify;
 
 use App\Mail\WelcomeEmail;
 use App\Models\User;
-use App\Models\Settings;
-use App\Models\Agent;
 use App\Models\CryptoAccount;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Laravel\Jetstream\Jetstream;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Support\SupportedCurrencies;
 use Illuminate\Validation\Rule;
@@ -29,57 +24,29 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
-        $settings = Settings::where('id', '1')->first();
         $request = request();
-        if ($settings->captcha == "true") {
-            Validator::make($input, [
-                'name' => ['required', 'string', 'max:255'],
-                'username' => ['required', 'unique:users,username'],
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
-                'password' => $this->passwordRules(),
-                'g-recaptcha-response' => 'required|captcha',
-                'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
-            ])->validate();
-        } else {
-            Validator::make($input, [
-                'name' => ['required', 'string', 'max:255'],
-                'username' => ['required', 'unique:users,username'],
-                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
-                'captcha' => ['required', function ($attribute, $value, $fail) use ($input) {
-        if ($value !== $input['captcha_confirmation']) {
-            $fail('The CAPTCHA code does not match.');
-        }
-    }],
+        $passwordRules = array_values(array_filter($this->passwordRules(), function ($rule) {
+            return $rule !== 'confirmed';
+        }));
 
-                'password' => $this->passwordRules(),
-                'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
-            ])->validate();
-        }
+        Validator::make($input, [
+            'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:191', 'unique:users,username'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
+            'password' => $passwordRules,
+        ])->validate();
 
         $currencyCode = $input['currency_code'];
         $currency = SupportedCurrencies::get($currencyCode);
 
-        if (session('ref_by')) {
-            $ref_by = session('ref_by');
-            $user = User::where('username', $ref_by)->first();
-            $ref_by_id = $user->id;
-        } else {
-            if (!empty($input['ref_by'])) {
-                $sponsor = User::where('username', $input['ref_by'])->first();
-                $ref_by_id = $sponsor->id;
-            } else {
-                $ref_by_id = NULL;
-            }
-        }
+        $referrer = session('ref_by') ?: ($input['ref_by'] ?? null);
+        $ref_by_id = $referrer ? User::where('username', $referrer)->value('id') : null;
 
         $user = User::create([
             'name' => $input['name'],
             'email' => $input['email'],
-            'phone' => $input['phone'],
             'username' => $input['username'],
-            'country' => $input['country'],
             'ref_by' => $ref_by_id,
             'status' => 'active',
             'currency' => $currency['symbol'],
