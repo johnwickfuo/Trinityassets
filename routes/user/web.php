@@ -61,6 +61,9 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
         Route::prefix('nfts')->name('user.nfts.')->group(function () {
             Route::get('/', [\App\Http\Controllers\User\NftController::class, 'index'])->name('index');
             Route::get('/my-nfts', [\App\Http\Controllers\User\NftController::class, 'collection'])->name('collection');
+            Route::get('/my-nfts/{nft}', [\App\Http\Controllers\User\NftController::class, 'show'])->whereNumber('nft')->name('show');
+            Route::post('/{nft}/buy', [\App\Http\Controllers\User\NftController::class, 'buy'])->whereNumber('nft')->name('buy');
+            Route::post('/{nft}/sell', [\App\Http\Controllers\User\NftController::class, 'sell'])->whereNumber('nft')->name('sell');
             Route::get('/swap', [\App\Http\Controllers\User\NftController::class, 'swap'])->name('swap');
             Route::get('/{nft}/image', [\App\Http\Controllers\User\NftController::class, 'image'])->whereNumber('nft')->name('image');
         });

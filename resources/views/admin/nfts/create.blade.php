@@ -50,6 +50,20 @@
                                     <label for="nft-description" class="text-{{ $text }}">Description <span class="font-weight-normal">(optional)</span></label>
                                     <textarea id="nft-description" name="description" rows="4" maxlength="2000" class="form-control bg-{{ $bg }} text-{{ $text }}" placeholder="Tell users about the artwork.">{{ old('description') }}</textarea>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label for="projected-min" class="text-{{ $text }}">Projected value from</label>
+                                        <input id="projected-min" name="projected_min_value" type="number" value="{{ old('projected_min_value') }}" min="0.01" max="9999999999.99" step="0.01" required class="form-control bg-{{ $bg }} text-{{ $text }}">
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label for="projected-max" class="text-{{ $text }}">Projected value to</label>
+                                        <input id="projected-max" name="projected_max_value" type="number" value="{{ old('projected_max_value') }}" min="0.01" max="9999999999.99" step="0.01" required class="form-control bg-{{ $bg }} text-{{ $text }}">
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input id="auto-bids" name="auto_bid_enabled" type="checkbox" value="1" {{ old('auto_bid_enabled') ? 'checked' : '' }} class="form-check-input">
+                                    <label for="auto-bids" class="form-check-label text-{{ $text }}">Generate daily automatic bids after purchase</label>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -76,7 +90,30 @@
                             <div class="card-body">
                                 <h3 class="h5 text-{{ $text }}" style="overflow-wrap:anywhere;">{{ $nft->name }}</h3>
                                 <p class="text-{{ $text }} font-weight-bold mb-2">{{ $nft->currency }} {{ number_format($nft->price, 2) }}</p>
+                                <p class="text-{{ $text }} small mb-2">Projected: {{ $nft->currency }} {{ number_format($nft->projected_min_value, 2) }} – {{ number_format($nft->projected_max_value, 2) }}</p>
                                 <span class="badge {{ $nft->is_available ? 'badge-success' : 'badge-secondary' }}">{{ $nft->is_available ? 'Available' : 'Unavailable' }}</span>
+                                @if ($nft->owner)
+                                    <p class="text-{{ $text }} small mt-3 mb-2">Owner: {{ $nft->owner->email }}</p>
+                                    @if ($nft->currentBid)
+                                        <p class="text-{{ $text }} small">Current bid: <strong>{{ $nft->currency }} {{ number_format($nft->currentBid->amount, 2) }}</strong></p>
+                                    @endif
+                                    <form method="POST" action="{{ route('admin.nfts.bids.manual', $nft) }}" class="mt-3">
+                                        @csrf
+                                        <div class="input-group input-group-sm">
+                                            <input name="amount" type="number" min="0.01" max="9999999999.99" step="0.01" required class="form-control" placeholder="Manual bid">
+                                            <div class="input-group-append"><button class="btn btn-primary" type="submit">Add bid</button></div>
+                                        </div>
+                                    </form>
+                                    <form method="POST" action="{{ route('admin.nfts.bids.automatic', $nft) }}" class="mt-2">
+                                        @csrf
+                                        <button class="btn btn-sm btn-info btn-block" type="submit">Generate in-range bid now</button>
+                                    </form>
+                                    <form method="POST" action="{{ route('admin.nfts.automatic-bids', $nft) }}" class="mt-2">
+                                        @csrf @method('PATCH')
+                                        <input type="hidden" name="enabled" value="{{ $nft->auto_bid_enabled ? 0 : 1 }}">
+                                        <button class="btn btn-sm btn-outline-secondary btn-block" type="submit">{{ $nft->auto_bid_enabled ? 'Disable' : 'Enable' }} daily bids</button>
+                                    </form>
+                                @endif
                             </div>
                         </article>
                     </div>

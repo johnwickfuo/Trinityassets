@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Nft;
 use App\Models\Settings;
+use App\Services\NftBidService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,7 @@ class NftController extends Controller
     {
         return view('admin.nfts.create', [
             'title' => 'Upload NFT',
-            'nfts' => Nft::orderByDesc('id')->paginate(12),
+            'nfts' => Nft::with(['owner', 'currentBid'])->orderByDesc('id')->paginate(12),
         ]);
     }
 
@@ -35,9 +36,14 @@ class NftController extends Controller
             'name' => ['required', 'string', 'max:120'],
             'description' => ['nullable', 'string', 'max:2000'],
             'price' => ['required', 'numeric', 'min:0.01', 'max:9999999999.99', 'regex:/^\d{1,10}(?:\.\d{1,2})?$/'],
+            'projected_min_value' => ['required', 'numeric', 'gte:price', 'max:9999999999.99', 'regex:/^\d{1,10}(?:\.\d{1,2})?$/'],
+            'projected_max_value' => ['required', 'numeric', 'gte:projected_min_value', 'max:9999999999.99', 'regex:/^\d{1,10}(?:\.\d{1,2})?$/'],
+            'auto_bid_enabled' => ['nullable', 'boolean'],
             'image' => ['required', 'file', 'image', 'mimes:jpg,jpeg,png,webp,gif', 'max:4096', 'dimensions:max_width=6000,max_height=6000'],
         ], [
             'price.regex' => 'Enter a price with no more than two decimal places.',
+            'projected_min_value.gte' => 'The minimum projected value must be at least the purchase price.',
+            'projected_max_value.gte' => 'The maximum projected value must be at least the minimum projected value.',
             'image.max' => 'The NFT image must be no larger than 4 MB.',
         ]);
 
@@ -57,9 +63,12 @@ class NftController extends Controller
                 'name' => $data['name'],
                 'description' => $data['description'] ?? null,
                 'price' => $data['price'],
+                'projected_min_value' => $data['projected_min_value'],
+                'projected_max_value' => $data['projected_max_value'],
                 'currency' => trim($currency),
                 'image_path' => $path,
                 'is_available' => true,
+                'auto_bid_enabled' => $request->boolean('auto_bid_enabled'),
             ]);
         } catch (\Throwable $exception) {
             // Do not leave an orphan image when the database write fails.
@@ -69,6 +78,31 @@ class NftController extends Controller
 
         return redirect()->route('admin.nfts.create')
             ->with('success', 'NFT uploaded. It is now visible in the Buy NFT catalogue.');
+    }
+
+    public function manualBid(Request $request, Nft $nft, NftBidService $bidService)
+    {
+        $data = $request->validate([
+            'amount' => ['required', 'numeric', 'min:0.01', 'max:9999999999.99', 'regex:/^\d{1,10}(?:\.\d{1,2})?$/'],
+        ]);
+        $bidService->createManual($nft, $data['amount']);
+
+        return back()->with('success', 'Manual bid created for '.$nft->name.'.');
+    }
+
+    public function automaticBid(Nft $nft, NftBidService $bidService)
+    {
+        $bid = $bidService->createAutomatic($nft);
+
+        return back()->with('success', 'Automatic bid of '.$bid->currency.' '.number_format($bid->amount, 2).' generated.');
+    }
+
+    public function toggleAutomaticBids(Request $request, Nft $nft)
+    {
+        $data = $request->validate(['enabled' => ['required', 'boolean']]);
+        $nft->update(['auto_bid_enabled' => (bool) $data['enabled']]);
+
+        return back()->with('success', 'Automatic daily bids updated for '.$nft->name.'.');
     }
 
     public function image(Nft $nft)

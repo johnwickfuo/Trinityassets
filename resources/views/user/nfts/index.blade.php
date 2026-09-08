@@ -10,6 +10,8 @@
         </div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        @if (session('error'))<div class="mb-6 rounded-xl bg-red-50 dark:bg-red-900/20 p-4 text-red-700 dark:text-red-300">{{ session('error') }}</div>@endif
+        @if ($errors->any())<div class="mb-6 rounded-xl bg-red-50 dark:bg-red-900/20 p-4 text-red-700 dark:text-red-300">{{ $errors->first() }}</div>@endif
         <div class="flex items-center justify-between gap-4 mb-6">
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Available NFTs</h2>
             <span class="text-sm text-gray-500 dark:text-gray-400">{{ $nfts->total() }} {{ $nfts->total() === 1 ? 'artwork' : 'artworks' }}</span>
@@ -26,6 +28,11 @@
                         <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-700">
                             <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">Price</p>
                             <p class="mt-1 text-2xl font-semibold text-blue-600 dark:text-blue-400">{{ $nft->currency }} {{ number_format($nft->price, 2) }}</p>
+                            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Projected value: <strong>{{ $nft->currency }} {{ number_format($nft->projected_min_value, 2) }} – {{ number_format($nft->projected_max_value, 2) }}</strong></p>
+                            <form method="POST" action="{{ route('user.nfts.buy', $nft) }}" class="mt-4" onsubmit="return confirm('Buy this NFT for {{ $nft->currency }} {{ number_format($nft->price, 2) }}?')">
+                                @csrf
+                                <button type="submit" class="w-full rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white hover:bg-blue-700 transition">Buy NFT</button>
+                            </form>
                         </div>
                     </div>
                 </article>
