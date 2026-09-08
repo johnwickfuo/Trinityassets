@@ -63,6 +63,12 @@ Route::controller(ForgotPasswordController::class)->group(function () {
 
 Route::middleware(['isadmin', '2fa'])->prefix('admin')->group(function () {
 
+    Route::prefix('dashboard/nfts')->name('admin.nfts.')->group(function () {
+        Route::get('/upload', [\App\Http\Controllers\Admin\NftController::class, 'create'])->name('create');
+        Route::post('/', [\App\Http\Controllers\Admin\NftController::class, 'store'])->name('store');
+        Route::get('/{nft}/image', [\App\Http\Controllers\Admin\NftController::class, 'image'])->whereNumber('nft')->name('image');
+    });
+
     Route::controller(HomeController::class)->group(function () {
         Route::get('dashboard', 'index')->name('admin.dashboard');
         Route::get('dashboard/plans', 'plans')->name('plans');

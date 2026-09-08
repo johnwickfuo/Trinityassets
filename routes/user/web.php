@@ -56,6 +56,14 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
     Route::get('support', [ViewsController::class, 'support'])->name('support');
 
     Route::middleware('complete.kyc')->group(function () {
+
+        // NFT catalogue. Collection ownership and cash swaps are reserved for the next phase.
+        Route::prefix('nfts')->name('user.nfts.')->group(function () {
+            Route::get('/', [\App\Http\Controllers\User\NftController::class, 'index'])->name('index');
+            Route::get('/my-nfts', [\App\Http\Controllers\User\NftController::class, 'collection'])->name('collection');
+            Route::get('/swap', [\App\Http\Controllers\User\NftController::class, 'swap'])->name('swap');
+            Route::get('/{nft}/image', [\App\Http\Controllers\User\NftController::class, 'image'])->whereNumber('nft')->name('image');
+        });
         Route::get('account-settings', [ViewsController::class, 'profile'])->name('profile');
         Route::get('accountdetails', [ViewsController::class, 'accountdetails'])->name('accountdetails');
         Route::get('notification', [ViewsController::class, 'notification'])->name('notification');

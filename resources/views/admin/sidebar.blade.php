@@ -25,6 +25,13 @@
                 </li>
 
                 @if (Auth('admin')->User()->type == 'Super Admin' || Auth('admin')->User()->type == 'Admin')
+                <li class="nav-item {{ request()->routeIs('admin.nfts.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.nfts.create') }}">
+                        <i class="fas fa-image"></i>
+                        <p>Upload NFT</p>
+                    </a>
+                </li>
+
                   <li
                         class="nav-item {{ request()->routeIs('manageusers') ? 'active' : '' }} {{ request()->routeIs('loginactivity') ? 'active' : '' }} {{ request()->routeIs('user.plans') ? 'active' : '' }} {{ request()->routeIs('viewuser') ? 'active' : '' }}">
                         <a href="{{ url('/admin/dashboard/manageusers') }}">
