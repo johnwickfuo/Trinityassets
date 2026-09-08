@@ -235,6 +235,27 @@
             </div>
         </div>
 
+        <!-- Account Currency -->
+        <div class="space-y-2">
+            <label for="currency_code" class="block text-sm font-bold text-gray-200">
+                Display Currency <span class="text-red-400">*</span>
+            </label>
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-4 z-10">
+                    <i data-lucide="coins" class="h-5 w-5 text-gray-400 group-focus-within:text-blue-400 transition-colors"></i>
+                </div>
+                <select name="currency_code" id="currency_code" required
+                        class="block w-full rounded-xl border border-gray-600 bg-gray-900 pl-12 pr-8 py-4 text-white focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 focus:bg-gray-800 transition-all duration-200 text-sm font-bold appearance-none">
+                    @foreach(\App\Support\SupportedCurrencies::all() as $code => $currency)
+                        <option value="{{ $code }}" {{ old('currency_code', 'TTD') === $code ? 'selected' : '' }}>{{ $currency['name'] }} ({{ $code }} — {{ $currency['symbol'] }})</option>
+                    @endforeach
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none"><i data-lucide="chevron-down" class="h-4 w-4 text-gray-400"></i></div>
+            </div>
+            @error('currency_code')<p class="text-sm text-red-400">{{ $message }}</p>@enderror
+            <p class="text-xs text-gray-400">Sets the currency label used across your dashboard.</p>
+        </div>
+
         <!-- Field 1: Investment Experience -->
         <div class="space-y-2">
             <label for="experience" class="block text-sm font-bold text-gray-200">
@@ -641,9 +662,14 @@
                     } else if (step === 1) {
                         // Validate location
                         const country = document.getElementById('country').value;
+                        const currency = document.getElementById('currency_code').value;
 
                         if (!country || country === 'Select your country') {
                             missingFields.push('Country');
+                            isValid = false;
+                        }
+                        if (!currency) {
+                            missingFields.push('Display Currency');
                             isValid = false;
                         }
 

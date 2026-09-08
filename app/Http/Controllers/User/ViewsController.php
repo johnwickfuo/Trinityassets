@@ -297,7 +297,7 @@ class ViewsController extends Controller
     }
 
     //Return deposit route
-    public function deposits()
+    public function deposits(Request $request)
     {
 
 
@@ -309,6 +309,14 @@ class ViewsController extends Controller
         //sum total deposited
         $total_deposited = DB::table('deposits')->where('user', auth()->user()->id)->where('status', 'Processed')->sum('amount');
 
+        $wirexOrder = null;
+        if ($request->filled('wirex_order')) {
+            $wirexOrder = \App\Models\WirexCardOrder::whereKey($request->wirex_order)
+                ->where('user_id', Auth::id())
+                ->where('status', 'awaiting_payment')
+                ->firstOrFail();
+        }
+
         return view("user.deposits")
             ->with(array(
                 'title' => 'Fund your account',
@@ -317,6 +325,7 @@ class ViewsController extends Controller
                     ->orderBy('id', 'desc')
                     ->get(),
                 'deposited' => $total_deposited,
+                'wirexOrder' => $wirexOrder,
             ));
     }
 

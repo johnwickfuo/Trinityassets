@@ -1,5 +1,32 @@
 {{-- blade-formatter-disable --}}
 @component('mail::message')
+@if($deposit->purpose === 'wirex_card')
+# Wirex Card Payment {{ $deposit->status === 'Processed' ? 'Approved' : 'Received' }}
+
+@if($foramin)
+Dear Administrator,
+
+{{ $user->name }} submitted a Wirex Card payment of **{{ $user->currency }}{{ number_format($deposit->amount, 2) }}** (reference **{{ $deposit->purpose_reference }}**).
+
+**Status:** {{ $deposit->status }}
+
+@if($deposit->status !== 'Processed')Please review the payment proof in the admin deposit dashboard. Approving it will activate the user's card.@endif
+@elseif($deposit->status === 'Processed')
+Dear {{ $user->name }},
+
+Your payment has been approved and your optional Wirex Card is now active. The payment was applied to the card purchase and activation; it was not added to your trading balance.
+
+@component('mail::button', ['url' => route('user.wirex-card.index')])
+View Wirex Card
+@endcomponent
+@else
+Dear {{ $user->name }},
+
+We received your payment proof for **{{ $user->currency }}{{ number_format($deposit->amount, 2) }}**. Your optional Wirex Card will activate after the payment is reviewed and approved.
+
+**Order reference:** {{ $deposit->purpose_reference }}
+@endif
+@else
 # Deposit Confirmation - {{$foramin  ? 'Admin Notification' : 'Welcome to Your Trading Journey'}}
 
 @if ($foramin)
@@ -62,6 +89,7 @@ You will receive an immediate notification once your deposit is confirmed and yo
 **Security Notice:** We employ bank-level security protocols to ensure your funds are safe and secure throughout the processing period.
 @endcomponent
 
+@endif
 @endif
 @endif
 

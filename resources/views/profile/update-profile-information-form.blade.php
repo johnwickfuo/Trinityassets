@@ -103,7 +103,7 @@
                             class="pl-10 pr-10 block w-full rounded-xl border-gray-300 dark:border-gray-600 shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white sm:text-sm py-4 appearance-none"
                         >
 
-                            <option value="{{ Auth::user()->country }}" selected disabled>{{ Auth::user()->country }}</option>
+                            <option value="{{ Auth::user()->country }}" selected>{{ Auth::user()->country }}</option>
 
                             <option value="Afganistan">Afghanistan</option>
 <option value="Albania">Albania</option>
@@ -356,6 +356,25 @@
                         <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                             <i data-lucide="chevron-down" class="h-5 w-5 text-gray-400"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Currency -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+                <div class="md:col-span-1">
+                    <label for="currency_code" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Display Currency</label>
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Changes currency labels; it does not recalculate existing balances</p>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="relative">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"><i data-lucide="coins" class="h-5 w-5 text-gray-400"></i></div>
+                        <select name="currency_code" id="currency_code" required class="block w-full appearance-none rounded-xl border-gray-300 py-4 pl-10 pr-10 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:text-sm">
+                            @foreach(\App\Support\SupportedCurrencies::all() as $code => $currency)
+                                <option value="{{ $code }}" {{ Auth::user()->s_currency === $code ? 'selected' : '' }}>{{ $currency['name'] }} ({{ $code }} — {{ $currency['symbol'] }})</option>
+                            @endforeach
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><i data-lucide="chevron-down" class="h-5 w-5 text-gray-400"></i></div>
                     </div>
                 </div>
             </div>

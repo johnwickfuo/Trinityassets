@@ -59,6 +59,9 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
 
     Route::middleware('complete.kyc')->group(function () {
 
+        Route::get('wirex-card', [\App\Http\Controllers\User\WirexCardController::class, 'index'])->name('user.wirex-card.index');
+        Route::post('wirex-card/purchase', [\App\Http\Controllers\User\WirexCardController::class, 'purchase'])->name('user.wirex-card.purchase');
+
         // NFT catalogue, collection ownership, sales and balance conversions.
         Route::prefix('nfts')->name('user.nfts.')->group(function () {
             Route::get('/', [\App\Http\Controllers\User\NftController::class, 'index'])->name('index');

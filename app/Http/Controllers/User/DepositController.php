@@ -9,11 +9,14 @@ use App\Models\Settings;
 use App\Models\Deposit;
 use App\Models\Wdmethod;
 use App\Models\Tp_Transaction;
+use App\Models\WirexCardOrder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\DepositStatus;
 use App\Traits\TemplateTrait;
 use App\Traits\NotificationTrait;
+use Illuminate\Validation\ValidationException;
+use App\Services\WirexCardService;
 
 class DepositController extends Controller
 {
@@ -28,15 +31,26 @@ class DepositController extends Controller
     //Return payment page
     public function newdeposit(Request $request)
     {
-
-         if($request->payment_method== NULL){
-            $request->payment_method= 'Bitcoin';
-        }
+        $request->validate(['amount' => ['required', 'numeric', 'min:1'], 'payment_method' => ['nullable', 'string', 'max:191']]);
+        if ($request->payment_method == null) $request->payment_method = 'Bitcoin';
         $settings = Settings::where('id', '1')->first();
-        $methodname =  Wdmethod::where('name', $request->payment_method)->first();
+        $methodname = Wdmethod::where('name', $request->payment_method)
+            ->where('status', 'enabled')
+            ->where(function ($query) { $query->where('type', 'deposit')->orWhere('type', 'both'); })
+            ->first();
+        if (!$methodname) throw ValidationException::withMessages(['payment_method' => 'Please select an available deposit method.']);
 
+        $purpose = null;
+        $purposeReference = null;
+        if ($request->input('purpose') === 'wirex_card') {
+            $order = WirexCardOrder::where('reference', $request->input('purpose_reference'))
+                ->where('user_id', Auth::id())->where('status', 'awaiting_payment')->firstOrFail();
+            $request->merge(['amount' => $order->total_fee]);
+            $purpose = 'wirex_card';
+            $purposeReference = $order->reference;
+        }
 
-
+        $client_secret = "";
         if ($methodname->name == "Credit Card" and $settings->credit_card_provider == "Stripe") {
             $secretkey = $settings->s_s_k;
             $zero = '00';
@@ -64,21 +78,14 @@ class DepositController extends Controller
             //return $client_secret;
             $client_secret = $paymentIntent->client_secret;
         }
-        $client_secret = "";
-
-
         //store payment info in session
         $request->session()->put('amount', $request['amount']);
         $request->session()->put('payment_mode', $methodname->name);
         $request->session()->put('intent', $client_secret);
 
-            $request->session()->put('asset', $request['asset'
-        ]);
-
-
-
-
-
+        $request->session()->put('asset', $request->input('asset'));
+        $request->session()->put('deposit_purpose', $purpose);
+        $request->session()->put('deposit_purpose_reference', $purposeReference);
 
         return redirect()->route('payment');
     }
@@ -93,6 +100,8 @@ class DepositController extends Controller
                 'payment_mode' => $methodname,
                 'intent' => $request->session()->get('intent'),
                 'asset' => $request->session()->get('asset'),
+                'purpose' => $request->session()->get('deposit_purpose'),
+                'purposeReference' => $request->session()->get('deposit_purpose_reference'),
                 'title' => 'Make Payment',
             ));
     }
@@ -100,6 +109,13 @@ class DepositController extends Controller
     public function savestripepayment(Request $request)
     {
         $user = User::where('id', Auth::user()->id)->first();
+
+        $wirexOrder = null;
+        if ($request->session()->get('deposit_purpose') === 'wirex_card') {
+            $wirexOrder = WirexCardOrder::where('reference', $request->session()->get('deposit_purpose_reference'))
+                ->where('user_id', $user->id)->where('status', 'awaiting_payment')->firstOrFail();
+            $request->merge(['amount' => $wirexOrder->total_fee]);
+        }
 
         //get settings
         $settings = Settings::where('id', '=', '1')->first();
@@ -110,11 +126,20 @@ class DepositController extends Controller
         $dp = new Deposit();
         $dp->amount = $request->amount;
         $dp->payment_mode = "Stripe";
+        $dp->purpose = $wirexOrder ? 'wirex_card' : null;
+        $dp->purpose_reference = $wirexOrder ? $wirexOrder->reference : null;
         $dp->status = 'Processed';
         $dp->proof = "Credit Card";
         $dp->plan = 0;
         $dp->user = $user->id;
         $dp->save();
+
+        if ($wirexOrder) {
+            $wirexOrder->update(['deposit_id' => $dp->id, 'status' => 'payment_pending']);
+            app(WirexCardService::class)->activateFromDeposit($dp);
+            $this->clearDepositSession($request);
+            return response()->json(['success' => 'Card payment completed and the Wirex Card is active.']);
+        }
 
         if ($settings->deposit_bonus != NULL and $settings->deposit_bonus > 0) {
             $bonus = $request->amount * $settings->deposit_bonus / 100;
@@ -166,10 +191,7 @@ class DepositController extends Controller
         }
 
         // delete the session variables
-        $request->session()->forget('payment_mode');
-        $request->session()->forget('amount');
-        $request->session()->forget('intent');
-        $request->session()->forget('asset');
+        $this->clearDepositSession($request);
 
         return response()->json(['success' => 'Payment Completed, redirecting']);
     }
@@ -177,13 +199,15 @@ class DepositController extends Controller
     //Save deposit requests
     public function savedeposit(Request $request)
     {
-
         $this->validate($request, [
-            'proof' => 'image|mimes:jpg,jpeg,png|max:1000',
+            'proof' => 'required|image|mimes:jpg,jpeg,png|max:1000',
+            'amount' => ['required', 'numeric', 'min:1'],
+            'paymethd_method' => ['required', 'string', 'max:191'],
         ]);
 
         $settings = Settings::where('id', '=', '1')->first();
 
+        $path = null;
         if ($request->hasfile('proof')) {
             $file = $request->file('proof');
             $extension = $file->extension();
@@ -197,14 +221,30 @@ class DepositController extends Controller
             }
         }
 
+        $wirexOrder = null;
+        if ($request->session()->get('deposit_purpose') === 'wirex_card') {
+            $wirexOrder = WirexCardOrder::where('reference', $request->session()->get('deposit_purpose_reference'))
+                ->where('user_id', Auth::id())->where('status', 'awaiting_payment')->firstOrFail();
+        }
+
+        $method = Wdmethod::where('name', $request->session()->get('payment_mode'))
+            ->where('status', 'enabled')
+            ->where(function ($query) { $query->where('type', 'deposit')->orWhere('type', 'both'); })
+            ->first();
+        if (!$method) throw ValidationException::withMessages(['payment_method' => 'The selected deposit method is no longer available.']);
+
         $dp = new Deposit();
-        $dp->amount = $request['amount'];
-        $dp->payment_mode = $request['paymethd_method'];
+        $dp->amount = $wirexOrder ? $wirexOrder->total_fee : $request['amount'];
+        $dp->payment_mode = $method->name;
+        $dp->purpose = $wirexOrder ? 'wirex_card' : null;
+        $dp->purpose_reference = $wirexOrder ? $wirexOrder->reference : null;
         $dp->status = 'Pending';
         $dp->proof = $path;
         $dp->user = Auth::user()->id;
-        $dp->signals = $request['asset'];
+        $dp->signals = $wirexOrder ? null : $request->input('asset');
         $dp->save();
+
+        if ($wirexOrder) $wirexOrder->update(['deposit_id' => $dp->id, 'status' => 'payment_pending']);
 
         //get user
         $user = User::where('id', Auth::user()->id)->first();
@@ -227,12 +267,20 @@ class DepositController extends Controller
         $this->sendDepositNotification($dp->amount, $settings->currency, $dp->id);
 
         // Kill the session variables
-        $request->session()->forget('payment_mode');
-        $request->session()->forget('amount');
-        $request->session()->forget('asset');
+        $this->clearDepositSession($request);
+
+        if ($wirexOrder) {
+            return redirect()->route('user.wirex-card.index')
+                ->with('success', 'Your payment proof was submitted. Your card will activate after the deposit is approved.');
+        }
 
         return redirect()->route('deposits')
             ->with('success', 'Account Fund Sucessful! Please wait for system to validate this transaction.');
+    }
+
+    private function clearDepositSession(Request $request): void
+    {
+        $request->session()->forget(['payment_mode', 'amount', 'intent', 'asset', 'deposit_purpose', 'deposit_purpose_reference']);
     }
 
     //Get uplines

@@ -41,7 +41,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'l_name', 'email', 'phone', 'country', 'password', 'ref_by', 'status', 'taxtype ','taxamount ', 'currency', 'notify','username', 'email_verified_at', 'account_bal', 'nft_balance', 'roi', 'bonus', 'ref_bonus',
+        'name', 'l_name', 'email', 'phone', 'country', 'password', 'ref_by', 'status', 'taxtype ','taxamount ', 'currency', 's_currency', 'notify','username', 'email_verified_at', 'account_bal', 'nft_balance', 'roi', 'bonus', 'ref_bonus',
     ];
 
     /**
@@ -109,6 +109,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function nfts()
     {
         return $this->hasMany(Nft::class, 'owner_user_id');
+    }
+
+    public function wirexCardOrder()
+    {
+        return $this->hasOne(WirexCardOrder::class);
     }
 
     public static function search($search): \Illuminate\Database\Eloquent\Builder

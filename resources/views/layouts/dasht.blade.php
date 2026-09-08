@@ -697,6 +697,13 @@ s0.parentNode.insertBefore(s1,s0);
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('user.wirex-card.index') }}"
+                       class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors duration-150 {{ request()->routeIs('user.wirex-card.*') ? 'bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-medium' : '' }}">
+                        <i data-lucide="credit-card" class="w-5 h-5 mr-3"></i>
+                        Wirex Card
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('transferview') }}"
                        class="flex items-center px-3 py-2 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors duration-150 {{ request()->routeIs('transferview') ? 'bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 font-medium' : '' }}">
                         <i data-lucide="arrow-left-right" class="w-5 h-5 mr-3"></i>

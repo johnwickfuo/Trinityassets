@@ -7,10 +7,10 @@
     <div class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="text-center">
             <h1 class="text-2xl font-medium text-gray-900 dark:text-white">
-                Fund Your Account
+                {{ $wirexOrder ? 'Choose a Wirex Card Payment Method' : 'Fund Your Account' }}
             </h1>
             <p class="mt-2 text-gray-600 dark:text-gray-400">
-                Secure deposits to start trading
+                {{ $wirexOrder ? 'Complete your optional card purchase for 3,400 units' : 'Secure deposits to start trading' }}
             </p>
         </div>
     </div>
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Quick Amount Selector -->
-    <div class="mb-8 text-center">
+    @unless($wirexOrder)<div class="mb-8 text-center">
         <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Quick amounts:</p>
         <div class="flex flex-wrap justify-center gap-3">
             @php
@@ -40,7 +40,7 @@
                 </button>
             @endforeach
         </div>
-    </div>
+    </div>@endunless
 
     <!-- Main Grid Layout -->
     <div class="grid lg:grid-cols-3 gap-6">
@@ -60,6 +60,13 @@
                 <form method="POST" action="{{route('newdeposit')}}" class="space-y-6">
                     @csrf
                     <input type="hidden" name="asset" value=" ">
+                    @if($wirexOrder)
+                        <input type="hidden" name="purpose" value="wirex_card">
+                        <input type="hidden" name="purpose_reference" value="{{ $wirexOrder->reference }}">
+                        <div class="rounded-xl bg-blue-50 p-4 text-sm text-blue-800 dark:bg-blue-900/20 dark:text-blue-300">
+                            Order <strong>{{ $wirexOrder->reference }}</strong>. This payment purchases and activates the optional Wirex Card; it is not added to your trading balance.
+                        </div>
+                    @endif
 
                     <!-- Payment Method Selection -->
                     <div class="space-y-2">
@@ -89,15 +96,17 @@
                             <input type="number"
                                    id="amount"
                                    name="amount"
+                                   value="{{ $wirexOrder ? number_format($wirexOrder->total_fee, 2, '.', '') : '' }}"
                                    required
                                    min="1"
                                    step="0.01"
+                                   {{ $wirexOrder ? 'readonly' : '' }}
                                    placeholder="0.00"
                                    class="block w-full pl-8 pr-3 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700
                                           rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
-                            Enter the amount you wish to deposit
+                            {{ $wirexOrder ? 'Fixed Wirex Card purchase and activation total.' : 'Enter the amount you wish to deposit' }}
                         </p>
                     </div>
 

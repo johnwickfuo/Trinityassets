@@ -9,6 +9,8 @@ use App\Models\Deposit;
 use App\Models\Tp_Transaction;
 use App\Mail\DepositStatus;
 use App\Traits\PingServer;
+use App\Models\WirexCardOrder;
+use App\Services\WirexCardService;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,17 +21,32 @@ class ManageDepositController extends Controller
     //Delete deposit
     public function deldeposit($id)
     {
-        $deposit = Deposit::where('id', $id)->first();
+        $deposit = Deposit::where('id', $id)->firstOrFail();
+        if ($deposit->purpose === 'wirex_card') {
+            WirexCardOrder::where('deposit_id', $deposit->id)->where('status', '!=', 'active')
+                ->update(['deposit_id' => null, 'status' => 'awaiting_payment']);
+        }
         Storage::disk('public')->delete($deposit->proof);
         Deposit::where('id', $id)->delete();
         return redirect()->back()->with('success', 'Deposit history has been deleted!');
     }
 
     //process deposits
-    public function pdeposit($id)
+    public function pdeposit($id, WirexCardService $wirexCards)
     {
         //confirm the users plan
-        $deposit = Deposit::where('id', $id)->first();
+        $deposit = Deposit::where('id', $id)->firstOrFail();
+        if ($deposit->purpose === 'wirex_card') {
+            if ($deposit->status === 'Processed') return redirect()->back()->with('success', 'This Wirex Card payment was already processed.');
+            $order = $wirexCards->activateFromDeposit($deposit);
+            $user = $order->user;
+            try {
+                Mail::to($user->email)->send(new DepositStatus($deposit->fresh(), $user, 'Wirex Card Activated', false));
+            } catch (\Exception $e) {
+                \Log::error('Failed to send Wirex Card activation email.', ['deposit_id' => $deposit->id, 'user_id' => $user->id, 'error' => $e->getMessage()]);
+            }
+            return redirect()->back()->with('success', 'Wirex Card payment approved and the card is now active.');
+        }
         $user = User::where('id', $deposit->user)->first();
         //get settings
         $settings = Settings::where('id', '=', '1')->first();

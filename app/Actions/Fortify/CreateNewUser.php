@@ -14,6 +14,8 @@ use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use App\Support\SupportedCurrencies;
+use Illuminate\Validation\Rule;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -34,6 +36,7 @@ class CreateNewUser implements CreatesNewUsers
                 'name' => ['required', 'string', 'max:255'],
                 'username' => ['required', 'unique:users,username'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
                 'password' => $this->passwordRules(),
                 'g-recaptcha-response' => 'required|captcha',
                 'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
@@ -43,6 +46,7 @@ class CreateNewUser implements CreatesNewUsers
                 'name' => ['required', 'string', 'max:255'],
                 'username' => ['required', 'unique:users,username'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'currency_code' => ['required', Rule::in(array_keys(SupportedCurrencies::all()))],
                 'captcha' => ['required', function ($attribute, $value, $fail) use ($input) {
         if ($value !== $input['captcha_confirmation']) {
             $fail('The CAPTCHA code does not match.');
@@ -54,12 +58,8 @@ class CreateNewUser implements CreatesNewUsers
             ])->validate();
         }
 
-        if($request['currency']==Null){
-
-            $currency= '$';
-        }else{
-            $currency = $input['currency'];
-        }
+        $currencyCode = $input['currency_code'];
+        $currency = SupportedCurrencies::get($currencyCode);
 
         if (session('ref_by')) {
             $ref_by = session('ref_by');
@@ -82,7 +82,8 @@ class CreateNewUser implements CreatesNewUsers
             'country' => $input['country'],
             'ref_by' => $ref_by_id,
             'status' => 'active',
-            // 'currency'=> $currency,
+            'currency' => $currency['symbol'],
+            's_currency' => $currencyCode,
             'password' => Hash::make($input['password']),
         ]);
 
