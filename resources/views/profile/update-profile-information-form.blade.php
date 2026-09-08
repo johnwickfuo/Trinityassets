@@ -1,5 +1,5 @@
-<div x-data="{ saving: false }">
-    <form method="POST" action="javascript:void(0)" id="updateprofileform" class="space-y-6">
+<div>
+    <form method="POST" action="{{ route('profile.update') }}" id="updateprofileform" class="space-y-6">
         @csrf
 
         <!-- Profile Information Section -->
@@ -414,15 +414,14 @@
                 <div class="flex justify-end">
                     <button
                         type="submit"
+                        id="profile-save-button"
                         class="inline-flex items-center px-6 py-4 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
-                        x-on:click="saving = true"
-                        x-bind:disabled="saving"
                     >
-                        <span x-show="!saving">
+                        <span id="profile-save-label">
                             <i data-lucide="save" class="mr-2 h-5 w-5"></i>
                             Save Changes
                         </span>
-                        <span x-show="saving" style="display: none;">
+                        <span id="profile-saving-label" class="hidden">
                             <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -442,117 +441,68 @@
             lucide.createIcons();
         }
 
-        document.getElementById('updateprofileform').addEventListener('submit', function() {
-            const profileApp = Alpine.data('{ saving: true }');
+        const form = document.getElementById('updateprofileform');
+        const button = document.getElementById('profile-save-button');
+        const saveLabel = document.getElementById('profile-save-label');
+        const savingLabel = document.getElementById('profile-saving-label');
 
-            $.ajax({
-                url: "{{ route('profile.update') }}",
-                type: 'POST',
-                data: $('#updateprofileform').serialize(),
-                success: function(response) {
-                    if (response.status === 200) {
-                        // Show success notification with modern styling
-                        const toast = document.createElement('div');
-                        toast.className = 'fixed top-4 right-4 bg-green-50 dark:bg-green-900/30 border-l-4 border-green-500 text-green-700 dark:text-green-400 p-4 rounded-lg shadow-lg transform transition-all duration-300 ease-out z-50 flex items-start max-w-sm';
-                        toast.innerHTML = `
-                            <div class="flex-shrink-0">
-                                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-sm font-medium">${response.success}</p>
-                            </div>
-                            <div class="ml-auto pl-3">
-                                <div class="-mx-1.5 -my-1.5">
-                                    <button type="button" class="inline-flex rounded-md p-1.5 text-green-500 hover:bg-green-100 dark:hover:bg-green-800 focus:outline-none">
-                                        <span class="sr-only">Dismiss</span>
-                                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        `;
+        function setSaving(saving) {
+            button.disabled = saving;
+            button.classList.toggle('opacity-60', saving);
+            button.classList.toggle('cursor-not-allowed', saving);
+            saveLabel.classList.toggle('hidden', saving);
+            savingLabel.classList.toggle('hidden', !saving);
+        }
 
-                        document.body.appendChild(toast);
+        function showProfileToast(message, success) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-4 right-4 border-l-4 p-4 rounded-lg shadow-lg transition-all duration-300 z-50 flex items-start max-w-sm ' +
+                (success
+                    ? 'bg-green-50 dark:bg-green-900/30 border-green-500 text-green-700 dark:text-green-400'
+                    : 'bg-red-50 dark:bg-red-900/30 border-red-500 text-red-700 dark:text-red-400');
 
-                        // Add entrance animation
-                        setTimeout(() => {
-                            toast.classList.add('translate-y-2');
-                        }, 10);
+            const text = document.createElement('p');
+            text.className = 'text-sm font-medium pr-4';
+            text.textContent = message;
+            const close = document.createElement('button');
+            close.type = 'button';
+            close.className = 'ml-auto text-current font-bold';
+            close.setAttribute('aria-label', 'Dismiss');
+            close.textContent = '×';
+            close.addEventListener('click', function () { toast.remove(); });
+            toast.appendChild(text);
+            toast.appendChild(close);
+            document.body.appendChild(toast);
+            setTimeout(function () { toast.remove(); }, 5000);
+        }
 
-                        // Remove the notification after 5 seconds
-                        setTimeout(() => {
-                            toast.classList.remove('translate-y-2');
-                            toast.classList.add('-translate-y-2', 'opacity-0');
-                            setTimeout(() => {
-                                toast.remove();
-                            }, 300);
-                        }, 5000);
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            if (button.disabled) return;
 
-                        // Add click listener to dismiss button
-                        toast.querySelector('button').addEventListener('click', function() {
-                            toast.classList.remove('translate-y-2');
-                            toast.classList.add('-translate-y-2', 'opacity-0');
-                            setTimeout(() => {
-                                toast.remove();
-                            }, 300);
-                        });
-                    }
+            setSaving(true);
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: new FormData(form)
+                });
+                const payload = await response.json().catch(function () { return {}; });
 
-                    // Reset the saving state after 1 second
-                    setTimeout(() => {
-                        Alpine.store('saving', false);
-                    }, 1000);
-                },
-                error: function(data) {
-                    console.log(data);
-
-                    // Reset the saving state
-                    Alpine.store('saving', false);
-
-                    // Show error notification
-                    const toast = document.createElement('div');
-                    toast.className = 'fixed top-4 right-4 bg-red-50 dark:bg-red-900/30 border-l-4 border-red-500 text-red-700 dark:text-red-400 p-4 rounded-lg shadow-lg transform transition-all duration-300 ease-out z-50 flex items-start max-w-sm';
-                    toast.innerHTML = `
-                        <div class="flex-shrink-0">
-                            <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium">Failed to update profile. Please try again.</p>
-                        </div>
-                        <div class="ml-auto pl-3">
-                            <div class="-mx-1.5 -my-1.5">
-                                <button type="button" class="inline-flex rounded-md p-1.5 text-red-500 hover:bg-red-100 dark:hover:bg-red-800 focus:outline-none">
-                                    <span class="sr-only">Dismiss</span>
-                                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    `;
-
-                    document.body.appendChild(toast);
-
-                    // Add entrance animation
-                    setTimeout(() => {
-                        toast.classList.add('translate-y-2');
-                    }, 10);
-
-                    // Remove the notification after 5 seconds
-                    setTimeout(() => {
-                        toast.classList.remove('translate-y-2');
-                        toast.classList.add('-translate-y-2', 'opacity-0');
-                        setTimeout(() => {
-                            toast.remove();
-                        }, 300);
-                    }, 5000);
+                if (!response.ok) {
+                    const validationErrors = payload.errors ? Object.values(payload.errors).flat() : [];
+                    throw new Error(validationErrors[0] || payload.message || 'Failed to update profile. Please try again.');
                 }
-            });
+
+                showProfileToast(payload.success || 'Profile information updated successfully.', true);
+            } catch (error) {
+                showProfileToast(error.message || 'Failed to update profile. Please try again.', false);
+            } finally {
+                setSaving(false);
+            }
         });
     });
 </script>

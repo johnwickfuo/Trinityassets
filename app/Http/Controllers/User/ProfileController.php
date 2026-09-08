@@ -34,7 +34,11 @@ class ProfileController extends Controller
                 'currency' => $currency['symbol'],
                 's_currency' => $data['currency_code'],
             ]);
-        return response()->json(['status' => 200, 'success' => 'Profile Information Updated Sucessfully!']);
+        if ($request->expectsJson()) {
+            return response()->json(['status' => 200, 'success' => 'Profile information updated successfully.']);
+        }
+
+        return redirect()->back()->with('success', 'Profile information updated successfully.');
     }
 
     //update account and contact info
