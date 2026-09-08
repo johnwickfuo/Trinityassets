@@ -65,7 +65,9 @@ Route::middleware(['isadmin', '2fa'])->prefix('admin')->group(function () {
 
     Route::prefix('dashboard/nfts')->name('admin.nfts.')->group(function () {
         Route::get('/upload', [\App\Http\Controllers\Admin\NftController::class, 'create'])->name('create');
+        Route::get('/manage', [\App\Http\Controllers\Admin\NftController::class, 'manage'])->name('manage');
         Route::post('/', [\App\Http\Controllers\Admin\NftController::class, 'store'])->name('store');
+        Route::put('/{nft}', [\App\Http\Controllers\Admin\NftController::class, 'update'])->whereNumber('nft')->name('update');
         Route::post('/{nft}/bids/manual', [\App\Http\Controllers\Admin\NftController::class, 'manualBid'])->whereNumber('nft')->name('bids.manual');
         Route::post('/{nft}/bids/automatic', [\App\Http\Controllers\Admin\NftController::class, 'automaticBid'])->whereNumber('nft')->name('bids.automatic');
         Route::patch('/{nft}/automatic-bids', [\App\Http\Controllers\Admin\NftController::class, 'toggleAutomaticBids'])->whereNumber('nft')->name('automatic-bids');

@@ -25,10 +25,17 @@
                 </li>
 
                 @if (Auth('admin')->User()->type == 'Super Admin' || Auth('admin')->User()->type == 'Admin')
-                <li class="nav-item {{ request()->routeIs('admin.nfts.*') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->routeIs('admin.nfts.create', 'admin.nfts.store') ? 'active' : '' }}">
                     <a href="{{ route('admin.nfts.create') }}">
                         <i class="fas fa-image"></i>
                         <p>Upload NFT</p>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->routeIs('admin.nfts.manage', 'admin.nfts.update', 'admin.nfts.bids.*', 'admin.nfts.automatic-bids') ? 'active' : '' }}">
+                    <a href="{{ route('admin.nfts.manage') }}">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Manage NFTs</p>
                     </a>
                 </li>
 
