@@ -65,6 +65,9 @@ Route::middleware(['isadmin', '2fa'])->prefix('admin')->group(function () {
 
     Route::get('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'index'])->name('admin.popup-notifications.index');
     Route::post('dashboard/send-notification', [\App\Http\Controllers\Admin\PopupNotificationController::class, 'store'])->name('admin.popup-notifications.store');
+    Route::get('dashboard/nft-conversions', [\App\Http\Controllers\Admin\NftConversionController::class, 'index'])->name('admin.nft-conversions.index');
+    Route::post('dashboard/nft-conversions/{conversion}/approve', [\App\Http\Controllers\Admin\NftConversionController::class, 'approve'])->whereNumber('conversion')->name('admin.nft-conversions.approve');
+    Route::post('dashboard/nft-conversions/{conversion}/reject', [\App\Http\Controllers\Admin\NftConversionController::class, 'reject'])->whereNumber('conversion')->name('admin.nft-conversions.reject');
 
     Route::prefix('dashboard/nfts')->name('admin.nfts.')->group(function () {
         Route::get('/upload', [\App\Http\Controllers\Admin\NftController::class, 'create'])->name('create');

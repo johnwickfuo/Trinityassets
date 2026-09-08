@@ -165,6 +165,9 @@
                 <a href="{{ route('withdrawalsdeposits') }}" class="flex items-center justify-center w-full gap-1 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white transition">
                     <i data-lucide="arrow-up-right" class="w-4 h-4"></i> Withdraw
                 </a>
+                <a href="{{ route('user.nfts.swap') }}" class="flex items-center justify-center w-full gap-1 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white transition">
+                    <i data-lucide="repeat-2" class="w-4 h-4"></i> Swap NFT
+                </a>
             </div>
         </div>
     </div>

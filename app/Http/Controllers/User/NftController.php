@@ -111,14 +111,6 @@ class NftController extends Controller
         return redirect()->route('user.nfts.collection')->with('success', 'NFT sold. The bid amount has been credited to your NFT balance.');
     }
 
-    public function swap()
-    {
-        return view('user.nfts.coming-soon', [
-            'title' => 'Swap NFT for Cash',
-            'message' => 'NFT cash swaps are coming soon. You can explore the available artwork in the meantime.',
-        ]);
-    }
-
     public function image(Nft $nft)
     {
         abort_unless(($nft->is_available || (int) $nft->owner_user_id === (int) Auth::id()) && Storage::disk('local')->exists($nft->image_path), 404);

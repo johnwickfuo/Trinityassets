@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
          \App\Console\Commands\UpdateCryptoPrices::class,
           \App\Console\Commands\UpdateMarketInstruments::class,
           \App\Console\Commands\GenerateNftBids::class,
+          \App\Console\Commands\ExpireNftConversions::class,
     ];
 
     /**
@@ -39,6 +40,7 @@ class Kernel extends ConsoleKernel
         // Clean up old notifications once a week (keep last 30 days)
         $schedule->command('notifications:cleanup')->weekly();
         $schedule->command('nfts:generate-bids')->dailyAt('00:15')->withoutOverlapping();
+        $schedule->command('nfts:expire-conversions')->everyFiveMinutes()->withoutOverlapping();
 
 
 

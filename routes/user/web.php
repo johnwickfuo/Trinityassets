@@ -59,14 +59,17 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(func
 
     Route::middleware('complete.kyc')->group(function () {
 
-        // NFT catalogue. Collection ownership and cash swaps are reserved for the next phase.
+        // NFT catalogue, collection ownership, sales and balance conversions.
         Route::prefix('nfts')->name('user.nfts.')->group(function () {
             Route::get('/', [\App\Http\Controllers\User\NftController::class, 'index'])->name('index');
             Route::get('/my-nfts', [\App\Http\Controllers\User\NftController::class, 'collection'])->name('collection');
             Route::get('/my-nfts/{nft}', [\App\Http\Controllers\User\NftController::class, 'show'])->whereNumber('nft')->name('show');
             Route::post('/{nft}/buy', [\App\Http\Controllers\User\NftController::class, 'buy'])->whereNumber('nft')->name('buy');
             Route::post('/{nft}/sell', [\App\Http\Controllers\User\NftController::class, 'sell'])->whereNumber('nft')->name('sell');
-            Route::get('/swap', [\App\Http\Controllers\User\NftController::class, 'swap'])->name('swap');
+            Route::get('/swap', [\App\Http\Controllers\User\NftConversionController::class, 'index'])->name('swap');
+            Route::post('/swap', [\App\Http\Controllers\User\NftConversionController::class, 'store'])->name('conversions.store');
+            Route::get('/swap/{conversion}', [\App\Http\Controllers\User\NftConversionController::class, 'show'])->whereNumber('conversion')->name('conversions.show');
+            Route::post('/swap/{conversion}/pay-fee', [\App\Http\Controllers\User\NftConversionController::class, 'payFee'])->whereNumber('conversion')->name('conversions.pay-fee');
             Route::get('/{nft}/image', [\App\Http\Controllers\User\NftController::class, 'image'])->whereNumber('nft')->name('image');
         });
         Route::get('account-settings', [ViewsController::class, 'profile'])->name('profile');
