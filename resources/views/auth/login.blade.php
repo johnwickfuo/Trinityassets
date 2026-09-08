@@ -45,7 +45,7 @@
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{{ $settings->site_name }}</span>
                         </h2>
                         <p class="text-gray-300 text-sm sm:text-base">
-                            Access your trading dashboard
+                            Access your investment dashboard
                         </p>
 
                         <!-- Trading Stats -->

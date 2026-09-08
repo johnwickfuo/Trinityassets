@@ -1,7 +1,7 @@
 
 @extends('layouts.base')
 @inject('content', 'App\Http\Controllers\FrontController')
-@section('title', '{{$title}}')
+@section('title', 'Why Choose Us')
 
 @section('content')
 
@@ -33,7 +33,7 @@
             <!-- Header Content -->
             <div class="space-y-6">
                 <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
-                    <p class="text-sm font-medium text-blue-400">Choose Excellence</p>
+                    <p class="text-sm font-medium text-blue-400">A Digital Art Perspective</p>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                     Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">{{$settings->site_name}}</span>
@@ -124,8 +124,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Reliable</h3>
-                        <p class="text-gray-300">Featuring the market's sharpest execution, {{$settings->site_name}} cTrader fills your orders in milliseconds without any requotes or price manipulation.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Art First</h3>
+                        <p class="text-gray-300">Start with the artwork. Explore its creative idea, visual direction and the artist behind it.</p>
                     </div>
                 </div>
             </div>
@@ -140,8 +140,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Intelligent</h3>
-                        <p class="text-gray-300">Make informed decisions with smart market analysis tools, Live Sentiment data and in-platform market insights from Trading Central.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Research Matters</h3>
+                        <p class="text-gray-300">Look beyond attention and price. Consider edition size, ownership history and the quality of available information.</p>
                     </div>
                 </div>
             </div>
@@ -156,8 +156,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Transparent</h3>
-                        <p class="text-gray-300">Access transaction statistics, equity charts and detailed history of your deals for a crystal clear understanding of your performance.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Clear Perspective</h3>
+                        <p class="text-gray-300">Understand the participation terms and associated rights before deciding how an opportunity fits your goals.</p>
                     </div>
                 </div>
             </div>
@@ -172,8 +172,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Intuitive</h3>
-                        <p class="text-gray-300">Easy to use and navigate, {{$settings->site_name}} Trader was built with real traders' needs in mind. Trade with {{$settings->site_name}} cTrader and experience its distinct advantage.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Easy to Understand</h3>
+                        <p class="text-gray-300">Explore art NFTs at your own pace, with clear explanations of the concepts that matter.</p>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
     </div>
 </section>
 
-<!-- Trust Indicators Section -->
+<!-- What Guides Our Approach Section -->
 <section class="py-16 bg-gray-900 relative overflow-hidden">
     <!-- Background Effects -->
     <div class="absolute inset-0">
@@ -203,9 +203,9 @@
         <!-- Section Header -->
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Trust Indicators</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">What Guides Our Approach</span>
             </h2>
-            <p class="text-lg text-gray-300">We prioritize your trust and security with our robust trading platform.</p>
+            <p class="text-lg text-gray-300">Our approach brings together creativity, context and a clear understanding of digital art NFT investment.</p>
         </div>
 
     </div>
@@ -221,8 +221,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Globally Regulated</h3>
-                        <p class="text-gray-300">We are regulated by top-tier financial authorities, ensuring your funds are safe and secure.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Digital Art Focus</h3>
+                        <p class="text-gray-300">Digital art is the foundation of our NFT investment direction, from original works to editions and generative collections.</p>
                     </div>
                 </div>
             </div>
@@ -238,8 +238,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">40+ International Awards</h3>
-                        <p class="text-gray-300">Recognized globally for our excellence in trading services and customer support.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Creator Context</h3>
+                        <p class="text-gray-300">We encourage a closer look at the artist, their practice and the story behind a collection.</p>
                     </div>
                 </div>
             </div>
@@ -253,8 +253,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">24/7 Support</h3>
-                        <p class="text-gray-300">Our dedicated support team is available 24/7 to assist you with any trading needs or inquiries.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Investor Support</h3>
+                        <p class="text-gray-300">Contact our team with questions about the platform, your account or the information you need to understand a plan.</p>
                     </div>
                 </div>
             </div>
@@ -269,8 +269,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-4">Secure Transactions</h3>
-                        <p class="text-gray-300">All transactions are secured with advanced encryption protocols, ensuring your data and funds are protected at all times.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">Ownership Awareness</h3>
+                        <p class="text-gray-300">Review what a token represents, where the artwork is stored and which rights are included in the terms.</p>
                     </div>
                 </div>
             </div>

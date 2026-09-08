@@ -132,15 +132,15 @@
         }
     </style>
 
-    <title>{{$settings->site_name}} | CFD Trading — Trading on Stocks, Gold, Oil, Indices</title>
+    <title>{{$settings->site_name}} | @yield('title', 'Digital Art NFT Investment')</title>
     <link rel="manifest" href="./">
-    <meta name="theme-color" content="#111827">    <meta property="x-session-id" content="ghJjEOrjZ3KUPun1UQksVUbvK88y21dgIhKtb8GT">
+    <meta name="theme-color" content="#111827">
     <meta property="og:site_name" content="{{$settings->site_name}}">
-    <meta property="og:description" content="CFD Trading with {{$settings->site_name}}. Trading on Stocks, Gold, Oil, Indices with ultra-fast execution &amp; spreads from 0.0 pips. News, articles and training materials for experienced and novice traders.">
-    <meta name="description" content="CFD Trading with {{$settings->site_name}}. Trading on Stocks, Gold, Oil, Indices with ultra-fast execution &amp; spreads from 0.0 pips. News, articles and training materials for experienced and novice traders.">
-    <meta name="keywords" content="forex, CFDs, CFD, Bitcoin trading, crypto trading, online trading, Forex trading, Oil trading, Gold trading, trading indexes, shares trading, commodities trading, trading platform, Cryptocurrencies day trading">
+    <meta property="og:description" content="Explore digital art NFT investment with {{$settings->site_name}}. Discover original artwork, collections and the ideas behind digital ownership.">
+    <meta name="description" content="Explore digital art NFT investment with {{$settings->site_name}}. Discover original artwork, collections and the ideas behind digital ownership.">
+    <meta name="keywords" content="NFT investment, digital art, art NFTs, digital collectibles, art collections, digital ownership">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CFD Trading — Trading on Stocks, Gold, Oil, Indices | {{$settings->site_name}}">
+    <meta property="og:title" content="{{$settings->site_name}} | @yield('title', 'Digital Art NFT Investment')">
     <meta property="og:image" content="img/share.jpg">
 
     <!-- Favicon -->
@@ -261,17 +261,18 @@ s0.parentNode.insertBefore(s1,s0);
                 <nav class="hidden md:flex space-x-8">
                     <div class="relative" x-data="{ open: false }">
                         <button @click="open = !open" @click.away="open = false" class="group inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white focus:outline-none">
-                            <span>Trading</span>
+                            <span>Art NFTs</span>
                             <svg class="ml-2 h-4 w-4 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-dark-300 ring-1 ring-black ring-opacity-5 z-50" style="display: none;">
-                            <a href="cryptocurrencies" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Cryptocurrencies</a>
-                            <a href="forex" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Forex</a>
-                            <a href="shares" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Shares</a>
-                            <a href="indices" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Indices</a>
-                            <a href="etfs" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">ETFs</a>
+                            <a href="{{ route('nfts') }}" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">NFT Overview</a>
+                            <a href="cryptocurrencies" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Crypto & NFTs</a>
+                            <a href="forex" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Digital Originals</a>
+                            <a href="shares" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Art Editions</a>
+                            <a href="indices" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Collection Research</a>
+                            <a href="etfs" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Generative Art</a>
                         </div>
                     </div>
 
@@ -283,9 +284,9 @@ s0.parentNode.insertBefore(s1,s0);
                             </svg>
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-dark-300 ring-1 ring-black ring-opacity-5 z-50" style="display: none;">
-                            <a href="trade" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Trade</a>
-                            <a href="copy" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Copy Trading</a>
-                            <a href="automate" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Automated Trading</a>
+                            <a href="trade" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">NFT Investment</a>
+                            <a href="copy" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Collection Strategy</a>
+                            <a href="automate" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">NFT Research</a>
                         </div>
                     </div>
 
@@ -383,17 +384,18 @@ s0.parentNode.insertBefore(s1,s0);
                 <!-- Mobile Navigation -->
                 <div x-data="{ open: false }" class="py-1">
                     <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">
-                        <span>Trading</span>
+                        <span>Art NFTs</span>
                         <svg class="h-4 w-4 text-gray-400" :class="{'transform rotate-180': open}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </button>
                     <div x-show="open" class="pl-4">
-                        <a href="cryptocurrencies" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Cryptocurrencies</a>
-                        <a href="forex" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Forex</a>
-                        <a href="shares" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Shares</a>
-                        <a href="indices" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Indices</a>
-                        <a href="etfs" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">ETFs</a>
+                        <a href="{{ route('nfts') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">NFT Overview</a>
+                            <a href="cryptocurrencies" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Crypto & NFTs</a>
+                        <a href="forex" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Digital Originals</a>
+                        <a href="shares" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Art Editions</a>
+                        <a href="indices" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Collection Research</a>
+                        <a href="etfs" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Generative Art</a>
                     </div>
                 </div>
 
@@ -405,9 +407,9 @@ s0.parentNode.insertBefore(s1,s0);
                         </svg>
                     </button>
                     <div x-show="open" class="pl-4">
-                        <a href="trade" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Trade</a>
-                        <a href="copy" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Copy Trading</a>
-                        <a href="automate" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Automated Trading</a>
+                        <a href="trade" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">NFT Investment</a>
+                        <a href="copy" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Collection Strategy</a>
+                        <a href="automate" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">NFT Research</a>
                     </div>
                 </div>
 
@@ -480,7 +482,7 @@ s0.parentNode.insertBefore(s1,s0);
                             </a>
                         </div>
                         <p class="text-sm text-gray-400 mb-6">
-                            {{$settings->site_name}} offers CFD trading on stocks, forex, indices, commodities, and cryptocurrencies with competitive spreads and advanced trading tools.
+                            {{$settings->site_name}} focuses on digital art NFT investment. Explore creative work, collection stories and the ideas behind digital ownership.
                         </p>
                         <div class="flex space-x-4">
                             <a href="#" class="text-gray-400 hover:text-white">
@@ -511,12 +513,13 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <!-- Trading -->
                     <div>
-                        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Trading</h3>
+                        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Art NFTs</h3>
                         <ul class="space-y-3">
-                            <li><a href="cryptocurrencies" class="text-sm text-gray-400 hover:text-white transition">Cryptocurrencies</a></li>
-                            <li><a href="forex" class="text-sm text-gray-400 hover:text-white transition">Forex</a></li>
-                            <li><a href="shares" class="text-sm text-gray-400 hover:text-white transition">Shares</a></li>
-                            <li><a href="indices" class="text-sm text-gray-400 hover:text-white transition">Indices</a></li>
+                            <li><a href="{{ route('nfts') }}" class="text-sm text-gray-400 hover:text-white transition">NFT Overview</a></li>
+                            <li><a href="cryptocurrencies" class="text-sm text-gray-400 hover:text-white transition">Crypto & NFTs</a></li>
+                            <li><a href="forex" class="text-sm text-gray-400 hover:text-white transition">Digital Originals</a></li>
+                            <li><a href="shares" class="text-sm text-gray-400 hover:text-white transition">Art Editions</a></li>
+                            <li><a href="indices" class="text-sm text-gray-400 hover:text-white transition">Collection Research</a></li>
                         </ul>
                     </div>
 
@@ -526,7 +529,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <ul class="space-y-3">
                             <li><a href="login" class="text-sm text-gray-400 hover:text-white transition">Log In</a></li>
                             <li><a href="register" class="text-sm text-gray-400 hover:text-white transition">Create Account</a></li>
-                            <li><a href="login" class="text-sm text-gray-400 hover:text-white transition">Demo Account</a></li>
+                            <li><a href="login" class="text-sm text-gray-400 hover:text-white transition">My Account</a></li>
                             <li><a href="contact" class="text-sm text-gray-400 hover:text-white transition">Help Center</a></li>
                         </ul>
                     </div>
@@ -572,7 +575,7 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="py-6">
                 <div class="text-xs text-gray-400">
                     <p class="mb-4 leading-relaxed">
-                        <span class="font-semibold text-gray-300">RISK WARNING:</span> The Financial Products offered by the company include Contracts for Difference ('CFDs') and other complex financial products. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, CFDs may not be suitable for all investors because it is possible to lose all of your invested capital. You should never invest money that you cannot afford to lose. Before trading in the complex financial products offered, please ensure you understand the risks involved.
+                        <span class="font-semibold text-gray-300">RISK WARNING:</span> Digital art NFT investments can lose value and may be difficult to sell. Returns and resale opportunities are not guaranteed. Understand what your investment represents, read the applicable terms and only commit funds you can afford to lose.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-4">
                         <a href="terms" class="text-blue-400 hover:text-blue-300 transition">Terms & Conditions</a>

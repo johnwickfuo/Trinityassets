@@ -47,14 +47,14 @@
                     class="space-y-6"
                 >
                     <div class="inline-block px-3 py-1 mb-2 text-xs font-semibold tracking-wider text-primary uppercase bg-blue-900 bg-opacity-30 rounded-full">
-                        Innovative Trading Platform
+                        Digital Art NFT Investment
                     </div>
                     <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
-                        <span class="block">Trade Global Markets</span>
-                        <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">With Confidence</span>
+                        <span class="block">Discover Digital Art</span>
+                        <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Explore NFT Investment</span>
                     </h1>
                     <p class="max-w-lg mt-5 text-xl text-gray-300">
-                        Access advanced trading tools for Forex, Cryptocurrencies, Commodities, Indices, and more with competitive spreads and lightning-fast execution.
+                        Explore a new dimension of investing with {{$settings->site_name}}. Discover the creativity, collections and digital ownership shaping the world of art NFTs.
                     </p>
                     <div class="flex flex-wrap gap-4 mt-8">
                         <a href="register" class="px-8 py-3 text-lg font-medium text-white transition-all duration-200 bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
@@ -407,8 +407,8 @@
 <section class="py-12 bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
-            <h2 class="text-3xl font-bold text-white">Why Trade With Us</h2>
-            <p class="mt-2 text-gray-400">Everything you need for successful trading</p>
+            <h2 class="text-3xl font-bold text-white">Why Explore Art NFTs</h2>
+            <p class="mt-2 text-gray-400">A closer look at creativity, ownership and investment</p>
         </div>
 
         <!-- Features Grid -->
@@ -418,8 +418,8 @@
                 <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 shadow-lg">
                     <i class="fas fa-chart-line text-white text-2xl"></i>
                 </div>
-                <h3 class="mb-2 text-xl font-bold text-white text-center">Trading Tools</h3>
-                <p class="text-gray-400 text-center">Plan your trades effectively with our wide range of free professional trading tools</p>
+                <h3 class="mb-2 text-xl font-bold text-white text-center">NFT Research</h3>
+                <p class="text-gray-400 text-center">Understand the creator, collection and ownership history behind the artwork</p>
             </div>
 
             <!-- Feature 2 -->
@@ -427,8 +427,8 @@
                 <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-green-500 to-green-700 shadow-lg">
                     <i class="fas fa-layer-group text-white text-2xl"></i>
                 </div>
-                <h3 class="mb-2 text-xl font-bold text-white text-center">Trading Products</h3>
-                <p class="text-gray-400 text-center">Diverse opportunities to optimize your trading portfolio across multiple markets</p>
+                <h3 class="mb-2 text-xl font-bold text-white text-center">Digital Art</h3>
+                <p class="text-gray-400 text-center">Explore the ideas and visual styles that make digital art collections distinctive</p>
             </div>
 
             <!-- Feature 3 -->
@@ -436,8 +436,8 @@
                 <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg">
                     <i class="fas fa-desktop text-white text-2xl"></i>
                 </div>
-                <h3 class="mb-2 text-xl font-bold text-white text-center">Trading Platforms</h3>
-                <p class="text-gray-400 text-center">Powerful platforms to suit all trading styles and needs on any device</p>
+                <h3 class="mb-2 text-xl font-bold text-white text-center">Digital Ownership</h3>
+                <p class="text-gray-400 text-center">Learn how tokens connect collectors with digitally created works</p>
             </div>
 
             <!-- Feature 4 -->
@@ -445,8 +445,8 @@
                 <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 shadow-lg">
                     <i class="fas fa-wallet text-white text-2xl"></i>
                 </div>
-                <h3 class="mb-2 text-xl font-bold text-white text-center">Funding Methods</h3>
-                <p class="text-gray-400 text-center">Multiple quick, easy and secure methods to fund your trading account</p>
+                <h3 class="mb-2 text-xl font-bold text-white text-center">Investment Approach</h3>
+                <p class="text-gray-400 text-center">Consider your goals, budget and the terms of an opportunity before taking part</p>
             </div>
         </div>
     </div>
@@ -460,16 +460,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-emerald-400 uppercase bg-gradient-to-r from-emerald-900 to-teal-900 bg-opacity-70 rounded-full shadow-lg">
-                Real-Time Intelligence
+                A Wider Perspective
             </span>
-            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">Market Analysis & Insights</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Stay ahead with real-time market data, AI-powered insights, and expert analysis</p>
+            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">NFT Research & Context</h2>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Understand digital art in the context of the wider digital asset market</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Market Overview Chart -->
             <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 shadow-lg hover:border-blue-500 transition-all duration-300">
-                <h3 class="mb-4 text-xl font-semibold text-white">Live Market Overview</h3>
+                <h3 class="mb-4 text-xl font-semibold text-white">Wider Market Context</h3>
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -625,7 +625,7 @@
             <!-- Expert Analysis Content -->
             <div class="space-y-6">
                 <div class="bg-gray-800 bg-opacity-80 p-6 rounded-xl border border-gray-700 hover:border-emerald-500 shadow-lg transition duration-300">
-                    <h3 class="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 mb-4">Expert Market Analysis</h3>
+                    <h3 class="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 mb-4">What to Look For</h3>
 
                     <div class="space-y-6">
                         <!-- Analysis Card 1 -->
@@ -636,9 +636,9 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h4 class="text-lg font-medium text-white">Daily Market <span class="text-emerald-400">Updates</span></h4>
+                                <h4 class="text-lg font-medium text-white">Creator <span class="text-emerald-400">Background</span></h4>
                                 <p class="mt-2 text-gray-300" :class="expanded ? '' : 'line-clamp-2'">
-                                    Receive daily market analysis directly to your inbox. Our team of expert analysts provide actionable insights on market trends, price movements, and trading opportunities across all major asset classes.
+                                    Get to know the artist behind a collection. Their creative direction, previous work and connection with collectors can add context to your research.
                                 </p>
                                 <button @click="expanded = !expanded" class="mt-2 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-emerald-700 to-blue-700 hover:from-emerald-600 hover:to-blue-600 text-white rounded-full transition duration-300 focus:outline-none">
                                     <span x-show="!expanded">Read more</span>
@@ -655,9 +655,9 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h4 class="text-lg font-medium text-white">Premium Trading <span class="text-blue-400">Tools</span></h4>
+                                <h4 class="text-lg font-medium text-white">Collection <span class="text-blue-400">Details</span></h4>
                                 <p class="mt-2 text-gray-300" :class="expanded ? '' : 'line-clamp-2'">
-                                    Access advanced trading tools designed for all experience levels. Our platform offers customizable solutions to meet diverse trading needs and styles, with multi-language support for international traders.
+                                    Look at the edition size, token details and artwork information. Distinguish the creative qualities you value from claims made in promotional material.
                                 </p>
                                 <button @click="expanded = !expanded" class="mt-2 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-blue-700 to-blue-700 hover:from-blue-600 hover:to-blue-600 text-white rounded-full transition duration-300 focus:outline-none">
                                     <span x-show="!expanded">Read more</span>
@@ -674,9 +674,9 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h4 class="text-lg font-medium text-white">Funds <span class="text-blue-400">Protection</span></h4>
+                                <h4 class="text-lg font-medium text-white">Ownership <span class="text-blue-400">Context</span></h4>
                                 <p class="mt-2 text-gray-300" :class="expanded ? '' : 'line-clamp-2'">
-                                    Your security is our priority. We provide industry-leading insurance protection for client funds up to $1,000,000, ensuring your investments are protected against unforeseen circumstances.
+                                    Understand what an investment represents and which rights come with it. Ownership of a token and rights to reproduce an artwork are separate considerations.
                                 </p>
                                 <button @click="expanded = !expanded" class="mt-2 px-3 py-1 text-xs font-semibold bg-gradient-to-r from-blue-700 to-blue-700 hover:from-blue-600 hover:to-blue-600 text-white rounded-full transition duration-300 focus:outline-none">
                                     <span x-show="!expanded">Read more</span>
@@ -687,7 +687,7 @@
                     </div>
 
                     <div class="mt-8 text-center">
-                        <a href="login" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                        <a href="{{ route('nfts') }}" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
                             Learn more about our services
                             <i class="fas fa-arrow-right ml-2"></i>
                         </a>
@@ -701,12 +701,12 @@
 
 
 
-<!-- Trading Products Section -->
+<!-- Digital Art Section -->
 <section class="py-16 bg-dark-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
-            <h2 class="text-3xl font-bold text-white">Diverse Trading Products</h2>
-            <p class="mt-2 text-gray-400">Access global markets with competitive conditions</p>
+            <h2 class="text-3xl font-bold text-white">Discover Digital Art</h2>
+            <p class="mt-2 text-gray-400">Explore creative forms within the NFT art world</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -717,10 +717,10 @@
                     <div class="w-12 h-12 bg-blue-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-globe text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Forex</h3>
-                    <p class="text-gray-400 mb-4">Trade 70+ major, minor & exotic currency pairs with competitive spreads and conditions</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Digital Originals</h3>
+                    <p class="text-gray-400 mb-4">Discover individually created digital works and the artistic ideas behind them</p>
                     <a href="forex" class="text-blue-400 hover:text-blue-300 flex items-center text-sm font-medium">
-                        Explore Forex
+                        Explore Originals
                         <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
@@ -733,10 +733,10 @@
                     <div class="w-12 h-12 bg-green-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-chart-line text-green-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Shares</h3>
-                    <p class="text-gray-400 mb-4">Access hundreds of public companies from the US, UK, Germany and more markets</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Art Editions</h3>
+                    <p class="text-gray-400 mb-4">Learn how edition sizes and collection structure shape digital art ownership</p>
                     <a href="shares" class="text-green-400 hover:text-green-300 flex items-center text-sm font-medium">
-                        Explore Shares
+                        Explore Editions
                         <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
@@ -749,10 +749,10 @@
                     <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-fire text-yellow-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Energies</h3>
-                    <p class="text-gray-400 mb-4">Discover opportunities on UK & US Crude Oil as well as Natural Gas with tight spreads</p>
-                    <a href="commodities" class="text-yellow-400 hover:text-yellow-300 flex items-center text-sm font-medium">
-                        Explore Energies
+                    <h3 class="text-xl font-bold text-white mb-2">Generative Art</h3>
+                    <p class="text-gray-400 mb-4">Explore artwork created through code, rules and the imagination of the artist</p>
+                    <a href="{{ route('etfs') }}" class="text-yellow-400 hover:text-yellow-300 flex items-center text-sm font-medium">
+                        Explore Generative Art
                         <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
@@ -765,10 +765,10 @@
                     <div class="w-12 h-12 bg-blue-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-landmark text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Indices</h3>
-                    <p class="text-gray-400 mb-4">Trade major and minor Index CFDs from around the globe with competitive conditions</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Collection Research</h3>
+                    <p class="text-gray-400 mb-4">Look at the creative vision, history and context of a digital art collection</p>
                     <a href="indices" class="text-blue-400 hover:text-blue-300 flex items-center text-sm font-medium">
-                        Explore Indices
+                        Explore Collections
                         <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
@@ -780,15 +780,15 @@
 
 
 
-<!-- Cryptocurrency Trading Section -->
+<!-- The Wider Crypto Landscape Section -->
 <section class="py-16 bg-gradient-to-b from-dark-400 to-dark-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <div class="inline-block px-3 py-1 mb-2 text-xs font-semibold tracking-wider text-secondary uppercase bg-green-900 bg-opacity-30 rounded-full">
-                Popular Asset Class
+                Digital Asset Context
             </div>
-            <h2 class="text-3xl font-bold text-white">Cryptocurrency Trading</h2>
-            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Trade the world's most popular digital assets with competitive spreads and advanced tools</p>
+            <h2 class="text-3xl font-bold text-white">The Wider Crypto Landscape</h2>
+            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Explore the digital currencies and networks that form the wider context for NFTs</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -803,8 +803,8 @@
                         Bitcoin is a decentralized digital currency without a central bank or administrator, allowing peer-to-peer transactions without intermediaries on the blockchain network.
                     </p>
                     <div class="mt-4 flex justify-between items-center">
-                        <a href="cryptocurrencies" class="text-primary hover:underline text-sm font-medium flex items-center">
-                            Trade now
+                        <a href="{{ route('cryptocurrencies') }}" class="text-primary hover:underline text-sm font-medium flex items-center">
+                            Learn more
                             <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                         <span class="text-xs py-1 px-2 bg-gray-800 rounded-full text-gray-300">BTC/USD</span>
@@ -823,8 +823,8 @@
                         Ethereum is a decentralized, open-source blockchain with smart contract functionality. After Bitcoin, it is the largest cryptocurrency by market capitalization and most actively used blockchain.
                     </p>
                     <div class="mt-4 flex justify-between items-center">
-                        <a href="cryptocurrencies" class="text-primary hover:underline text-sm font-medium flex items-center">
-                            Trade now
+                        <a href="{{ route('cryptocurrencies') }}" class="text-primary hover:underline text-sm font-medium flex items-center">
+                            Learn more
                             <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                         <span class="text-xs py-1 px-2 bg-gray-800 rounded-full text-gray-300">ETH/USD</span>
@@ -845,8 +845,8 @@
                         Ripple is a real-time gross settlement system, currency exchange and remittance network created by Ripple Labs. It uses XRP as its native cryptocurrency to facilitate fast, low-cost international transactions.
                     </p>
                     <div class="mt-4 flex justify-between items-center">
-                        <a href="cryptocurrencies" class="text-primary hover:underline text-sm font-medium flex items-center">
-                            Trade now
+                        <a href="{{ route('cryptocurrencies') }}" class="text-primary hover:underline text-sm font-medium flex items-center">
+                            Learn more
                             <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                         <span class="text-xs py-1 px-2 bg-gray-800 rounded-full text-gray-300">XRP/USD</span>
@@ -867,8 +867,8 @@
                         Cardano is a proof-of-stake blockchain platform created by Ethereum co-founder Charles Hoskinson. It aims to be more scalable, sustainable, and interoperable than other blockchain platforms.
                     </p>
                     <div class="mt-4 flex justify-between items-center">
-                        <a href="cryptocurrencies" class="text-primary hover:underline text-sm font-medium flex items-center">
-                            Trade now
+                        <a href="{{ route('cryptocurrencies') }}" class="text-primary hover:underline text-sm font-medium flex items-center">
+                            Learn more
                             <i class="fas fa-arrow-right ml-1"></i>
                         </a>
                         <span class="text-xs py-1 px-2 bg-gray-800 rounded-full text-gray-300">ADA/USD</span>
@@ -879,7 +879,7 @@
 
         <div class="mt-10 text-center">
             <a href="cryptocurrencies" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-150">
-                View all cryptocurrencies
+                Explore Crypto & NFTs
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
@@ -912,11 +912,11 @@
             <div class="space-y-6">
                 <div>
                     <span class="text-primary text-sm font-semibold uppercase tracking-wider">Education Center</span>
-                    <h2 class="mt-2 text-3xl font-bold text-white">Learn From Market Experts</h2>
+                    <h2 class="mt-2 text-3xl font-bold text-white">Start with the Foundations</h2>
                 </div>
 
                 <p class="text-gray-300 text-lg">
-                    Discover everything you need to know about cryptocurrency trading, from fundamentals to advanced strategies.
+                    Explore digital ownership, blockchain basics and the ideas behind digital art NFT investment.
                 </p>
 
                 <div class="bg-dark-300 rounded-lg p-6 border border-gray-800">
@@ -931,8 +931,8 @@
                         Explore learning resources
                         <i class="fas fa-graduation-cap ml-2"></i>
                     </a>
-                    <a href="login" class="inline-flex items-center px-5 py-2 border border-gray-700 text-base font-medium rounded-md text-gray-300 hover:text-white hover:border-gray-500 transition duration-150">
-                        Join free webinars
+                    <a href="{{ route('faq') }}" class="inline-flex items-center px-5 py-2 border border-gray-700 text-base font-medium rounded-md text-gray-300 hover:text-white hover:border-gray-500 transition duration-150">
+                        Read NFT FAQs
                         <i class="fas fa-video ml-2"></i>
                     </a>
                 </div>
@@ -956,17 +956,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-3 py-1 text-sm font-semibold tracking-wider text-primary uppercase bg-blue-900 bg-opacity-30 rounded-full">
-                Superior Trading Experience
+                An Informed Perspective
             </span>
-            <h2 class="mt-2 text-3xl font-bold text-white">Tighter Spreads. Faster Execution.</h2>
-            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Experience institutional-grade trading conditions designed for professional traders</p>
+            <h2 class="mt-2 text-3xl font-bold text-white">Art First. Research Always.</h2>
+            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Build your understanding of the artwork and the investment before deciding</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <!-- Left Side: Trading Advantages -->
             <div class="space-y-8">
                 <div class="bg-dark-300 rounded-xl p-6 border border-gray-800 shadow-lg">
-                    <h3 class="text-2xl font-bold text-white mb-6">Premium Trading Conditions</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6">A Closer Look at Art NFTs</h3>
 
                     <ul class="space-y-4">
                         <li class="flex items-start">
@@ -976,7 +976,7 @@
                                 </div>
                             </div>
                             <p class="ml-3 text-gray-300">
-                                <span class="font-semibold text-white">Ultra-low spreads</span> from 0.0 pips on major pairs
+                                <span class="font-semibold text-white">Creative story</span> and the artist behind the work
                             </p>
                         </li>
 
@@ -987,7 +987,7 @@
                                 </div>
                             </div>
                             <p class="ml-3 text-gray-300">
-                                <span class="font-semibold text-white">Lightning-fast execution</span> from NY4 server facility with minimal slippage
+                                <span class="font-semibold text-white">Collection structure</span> and edition details
                             </p>
                         </li>
 
@@ -998,7 +998,7 @@
                                 </div>
                             </div>
                             <p class="ml-3 text-gray-300">
-                                <span class="font-semibold text-white">Top-tier liquidity</span> and market-leading pricing 24/5
+                                <span class="font-semibold text-white">Ownership history</span> and available provenance
                             </p>
                         </li>
 
@@ -1009,14 +1009,14 @@
                                 </div>
                             </div>
                             <p class="ml-3 text-gray-300">
-                                <span class="font-semibold text-white">No dealing desk</span> and no requotes, ever
+                                <span class="font-semibold text-white">Associated rights</span> and investment terms
                             </p>
                         </li>
                     </ul>
 
                     <div class="mt-8">
-                        <a href="login" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-blue-700 transition duration-150">
-                            View detailed conditions
+                        <a href="{{ route('terms') }}" class="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-blue-700 transition duration-150">
+                            Read the Terms
                             <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1025,7 +1025,7 @@
 
             <!-- Right Side: Trading Widget -->
             <div class="bg-dark-300 rounded-xl p-5 border border-gray-800 shadow-lg">
-                <h3 class="text-xl font-semibold text-white mb-4">Live Market Overview</h3>
+                <h3 class="text-xl font-semibold text-white mb-4">Wider Market Context</h3>
 
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
@@ -1061,10 +1061,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-10 text-center">
             <span class="inline-block px-3 py-1 text-sm font-semibold tracking-wider text-green-400 uppercase bg-green-900 bg-opacity-30 rounded-full">
-                Social Trading
+                Collection Perspective
             </span>
-            <h2 class="mt-2 text-3xl font-bold text-white">Copy Professional Traders</h2>
-            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Let experienced traders do the work for you with our advanced copy trading system</p>
+            <h2 class="mt-2 text-3xl font-bold text-white">Understand What Makes Art Distinctive</h2>
+            <p class="mt-2 text-gray-400 max-w-2xl mx-auto">Explore the qualities that give a digital art collection its character</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1073,8 +1073,8 @@
                 <div class="w-14 h-14 bg-green-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-copy text-green-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Copy 400+ Strategies</h3>
-                <p class="text-gray-400">Access hundreds of strategies for more than 1000 instruments across 7 asset classes.</p>
+                <h3 class="text-xl font-bold text-white mb-3">Creative Direction</h3>
+                <p class="text-gray-400">Consider the concept, visual language and artistic intention behind the collection.</p>
             </div>
 
             <!-- Strategy 2 -->
@@ -1082,8 +1082,8 @@
                 <div class="w-14 h-14 bg-green-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-chart-line text-green-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Select Top Performers</h3>
-                <p class="text-gray-400">Use our reporting tools to rank strategies according to performance and select the most suitable for your circumstances.</p>
+                <h3 class="text-xl font-bold text-white mb-3">Artist Background</h3>
+                <p class="text-gray-400">Explore previous work, the creative process and how the artist engages with collectors.</p>
             </div>
 
             <!-- Strategy 3 -->
@@ -1091,8 +1091,8 @@
                 <div class="w-14 h-14 bg-green-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-shield-alt text-green-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Stay Protected</h3>
-                <p class="text-gray-400">The system uses sophisticated calculations to keep your exposure at an optimal level for your account.</p>
+                <h3 class="text-xl font-bold text-white mb-3">Ownership History</h3>
+                <p class="text-gray-400">Review the token details and available provenance before forming a view of the work.</p>
             </div>
 
             <!-- Strategy 4 -->
@@ -1100,8 +1100,8 @@
                 <div class="w-14 h-14 bg-green-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-sliders-h text-green-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Combine Methods</h3>
-                <p class="text-gray-400">Our integrated platform allows you to combine copying with manual and automated trading, depending on your preferences.</p>
+                <h3 class="text-xl font-bold text-white mb-3">Collection Context</h3>
+                <p class="text-gray-400">Look at how the artwork fits within an edition, a series or the broader practice of its creator.</p>
             </div>
         </div>
     </div>
@@ -1132,31 +1132,31 @@
 
         <div class="max-w-4xl mx-auto bg-dark-400 bg-opacity-80 p-8 rounded-xl border border-gray-800 shadow-xl">
             <p class="text-gray-300 leading-relaxed">
-                {{$settings->site_name}} has become one of the most reputable brokers in the industry, offering traders CFDs across Forex, Equities, Commodities and Futures. Trading on the Forex market is a legitimate and straightforward way of generating income.
+                {{$settings->site_name}} is focused on digital art NFT investment, bringing the worlds of creativity and digital assets into one conversation. Our direction is rooted in an appreciation of artwork, its creator and the meaning of digital ownership.
             </p>
 
             <p class="text-gray-300 leading-relaxed mt-4">
-                The good news is that you don't have to be a professional trader in order to make money. All you need is the right personality and the right skill set and you can make money trading on foreign exchanges. {{$settings->site_name}} lets you trade in the way that best suits you.
+                Whether you are discovering art NFTs for the first time or developing your understanding of digital collections, start with a clear view of what you value. Explore the artwork, ask questions and consider how an opportunity fits your goals.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div class="bg-dark-300 bg-opacity-60 p-4 rounded-lg">
                     <h3 class="text-white font-semibold flex items-center">
                         <i class="fas fa-check-circle text-primary mr-2"></i>
-                        Personalized Trading
+                        Your Art Perspective
                     </h3>
                     <p class="text-gray-400 mt-2">
-                        Do you want to risk a little or a lot? Do you want gains in the short term or are you playing a longer game? Are you a day trader, a swing trader or a scalper?
+                        What draws you to digital art: the visual style, the creative story or the collection behind it? Let your interests guide your research.
                     </p>
                 </div>
 
                 <div class="bg-dark-300 bg-opacity-60 p-4 rounded-lg">
                     <h3 class="text-white font-semibold flex items-center">
                         <i class="fas fa-check-circle text-primary mr-2"></i>
-                        Complete Control
+                        Informed Decisions
                     </h3>
                     <p class="text-gray-400 mt-2">
-                        With the right tools, information and access to all the world's currencies, {{$settings->site_name}} puts you in control of the trades you make.
+                        Take time to understand the information and terms before making an investment decision.
                     </p>
                 </div>
             </div>
@@ -1175,28 +1175,15 @@
 
 
 
-<!-- Start Pricing Trading on the Forex market is a legitimate and straightforward way of generating income. And the good news is that you donâ€™t have to be a professional trader in order to make money. All you need is the right personality and the right skill set and you can make money trading on foreign exchanges. {{$settings->site_name}} lets you trade in the way that best suits you. Do you want to risk a little or a lot? Do you want gains in the short term or are you playing a longer game? Are you a day trader, a swing trader or a scalper? Are you an old hand or a rookie just testing the water? It does not matter because {{$settings->site_name}} puts you in control.If you can control todayâ€™s success and not let it cloud tomorrowâ€™s judgment, you probably have it in you to make money as a currency trader. The prizes in Forex are certainly glittering but it is level headedness and persistence that win the day. With the right tools, information and access to all the worldâ€™s currencies, {{$settings->site_name}} puts you in control of the trades you make. </p> </li> </center></ul></div>
-
-
-
-<div class="text-center"></div>
-
-<div class="text-center mt-3"></div></div></section>
-
-
-
-
-
-
-<!-- Pricing Plans Section -->
+<!-- Investment Plans -->
 <section class="py-16 bg-gray-900" id="pricing">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Trading Plans
+                Investment Plans
             </span>
             <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">Investment Opportunities</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Choose the perfect plan that suits your investment strategy and financial goals</p>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Review the available plans and their terms alongside your digital art investment goals</p>
         </div>
 
         <div class="overflow-hidden">
@@ -1227,7 +1214,7 @@
         <div class="p-6 text-center">
             <div class="mb-6">
                 <span class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">{{$plan->increment_amount}}%</span>
-                <span class="text-gray-300 ml-1">/ Trade</span>
+                <span class="text-gray-300 ml-1">/ Plan</span>
             </div>
 
             <!-- Features List -->
@@ -1236,25 +1223,25 @@
                     <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                     </svg>
-                    Principal return on maturity
+                    Review principal terms
                 </li>
                 <li class="text-gray-300 flex items-center justify-center">
                     <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                     </svg>
-                    Instant Withdrawal
+                    Review withdrawal terms
                 </li>
                 <li class="text-gray-300 flex items-center justify-center">
                     <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                     </svg>
-                    Professional Charts
+                    Account dashboard
                 </li>
                 <li class="text-gray-300 flex items-center justify-center">
                     <svg class="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                     </svg>
-                    24/7 Support
+                    Contact support
                 </li>
                 <li class="text-white font-semibold flex items-center justify-center border-t border-gray-700 pt-3 mt-3">
                     <svg class="w-5 h-5 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1294,8 +1281,8 @@
         <div class="mt-12 p-6 bg-gray-800 bg-opacity-70 rounded-xl border border-gray-700 shadow-lg">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-3/5 mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold text-white mb-3">Need a custom plan?</h3>
-                    <p class="text-gray-300">Our team can create tailored investment solutions for institutional clients and high-net-worth individuals.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Have a question about a plan?</h3>
+                    <p class="text-gray-300">Contact our team to understand a plan, its terms and how it relates to the platform.</p>
                 </div>
                 <div>
                     <a href="contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-lg transition duration-300 transform hover:-translate-y-1">
@@ -1346,26 +1333,26 @@
                 <div>
                     <h2 class="text-2xl font-bold text-white mb-2 flex items-center">
                         <i class="fas fa-headset text-primary mr-3"></i>
-                        STAY UP TO DATE WITH OUR EXPERTS
+                        EXPLORE DIGITAL ART WITH US
                     </h2>
                     <div class="h-1 w-20 bg-primary my-4"></div>
                     <p class="text-gray-300 leading-relaxed">
-                        Our local and international teams are here to support you on a 24/5 basis in more than 20 languages, while our wide range of payment methods gives you greater flexibility when it comes to deposits and withdrawals.
+                        Have a question about digital art NFT investment or your account? Explore our learning pages or contact our team for help with your next step.
                     </p>
                 </div>
 
                 <div class="bg-dark-300 rounded-lg p-6 border border-gray-800">
                     <h2 class="text-xl font-bold text-white mb-3 flex items-center">
                         <i class="fas fa-star text-yellow-400 mr-3"></i>
-                        Experience More Than Trading
+                        Discover More Than an Image
                     </h2>
                     <p class="text-gray-300 leading-relaxed">
-                        Our success is centred around a number of core values. They include providing competitive brokerage fees through tight spreads, ensuring lightning-fast execution, access to advanced trading platforms with a wide range of products, and exceptional customer service.
+                        Digital art brings together creativity, cultural relevance and digital ownership. Our focus is on helping investors understand the artwork, the creator and the collection behind each NFT.
                     </p>
 
                     <div class="mt-6">
-                        <a href="login" class="inline-flex items-center px-5 py-2 border border-gray-700 text-base font-medium rounded-md text-gray-300 hover:text-white hover:border-primary transition duration-150">
-                            Learn about our commissions
+                        <a href="{{ route('why-us') }}" class="inline-flex items-center px-5 py-2 border border-gray-700 text-base font-medium rounded-md text-gray-300 hover:text-white hover:border-primary transition duration-150">
+                            Explore Our Approach
                             <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1382,10 +1369,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Platform Features
+                Investment Foundations
             </span>
-            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">Advanced Trading Tools</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Our platform provides everything you need for successful trading in one powerful interface</p>
+            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">Explore with Perspective</h2>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Bring creativity, research and clear expectations to digital art NFT investment</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1394,9 +1381,9 @@
                 <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4 shadow-lg">
                     <i class="fas fa-bolt text-white text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Reliable <span class="text-blue-400">Execution</span></h3>
+                <h3 class="text-xl font-bold text-white mb-3">Artistic <span class="text-blue-400">Direction</span></h3>
                 <p class="text-gray-300">
-                    Featuring the market's sharpest execution, {{$settings->site_name}} cTrader fills your orders in milliseconds without any requotes or price manipulation.
+                    Start with the artwork. Explore the creative idea, artistic direction and background of the creator behind a digital art NFT.
                 </p>
             </div>
 
@@ -1405,9 +1392,9 @@
                 <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-blue-700 rounded-full flex items-center justify-center mb-4 shadow-lg">
                     <i class="fas fa-chart-line text-white text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Intelligent <span class="text-indigo-400">Analysis</span></h3>
+                <h3 class="text-xl font-bold text-white mb-3">Collection <span class="text-indigo-400">Research</span></h3>
                 <p class="text-gray-300">
-                    Make informed decisions with smart market analysis tools, Live Sentiment data and in-platform market insights from Trading Central.
+                    Look beyond attention and price. Consider collection supply, ownership history and the quality of available information.
                 </p>
             </div>
 
@@ -1416,9 +1403,9 @@
                 <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
                     <i class="fas fa-search-dollar text-white text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Transparent <span class="text-cyan-400">Reporting</span></h3>
+                <h3 class="text-xl font-bold text-white mb-3">Investment <span class="text-cyan-400">Clarity</span></h3>
                 <p class="text-gray-300">
-                    Access transaction statistics, equity charts and detailed history of your deals for a crystal clear understanding of your performance.
+                    Bring together the purchase terms, associated rights and potential costs before deciding how an NFT fits your goals.
                 </p>
             </div>
 
@@ -1427,9 +1414,9 @@
                 <div class="w-16 h-16 bg-gradient-to-br from-teal-600 to-green-700 rounded-full flex items-center justify-center mb-4 shadow-lg">
                     <i class="fas fa-desktop text-white text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">Intuitive <span class="text-teal-400">Interface</span></h3>
+                <h3 class="text-xl font-bold text-white mb-3">A Clear <span class="text-teal-400">Starting Point</span></h3>
                 <p class="text-gray-300">
-                    Easy to use and navigate, {{$settings->site_name}} cTrader was built with real traders' needs in mind. Trade with {{$settings->site_name}} cTrader and experience its distinct advantage.
+                    Explore digital art NFT investment at your own pace, with clear explanations of the concepts that matter.
                 </p>
             </div>
         </div>
@@ -1447,27 +1434,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Global Trust
+                Our Focus
             </span>
-            <h2 class="mt-3 text-3xl font-bold text-white">Why <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">{{$settings->site_name}}</span> Is One of the World's Most Trusted Brands</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Experience the reliability and security that our global clients have come to trust</p>
+            <h2 class="mt-3 text-3xl font-bold text-white">Discover the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">{{$settings->site_name}}</span> Perspective</h2>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">A digital art focus with an emphasis on understanding what you invest in</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <!-- TradingView Widget Container -->
-            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-xl transform transition duration-500 hover:shadow-blue-900/20" x-data="{}" x-init="setTimeout(() => {
-                new TradingView.widget({
-                    'container_id': 'forex_heat_map',
-                    'width': '100%',
-                    'height': 400,
-                    'currencies': ['EUR', 'USD', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD', 'NZD', 'CNY'],
-                    'isTransparent': true,
-                    'colorTheme': 'dark',
-                    'locale': 'en'
-                });
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-xl transform transition duration-500 hover:shadow-blue-900/20" x-data="{}" x-init="setTimeout(() =>
+);
             }, 100)">
                 <div class="p-4 bg-gray-800 border-b border-gray-700">
-                    <h3 class="text-xl font-semibold text-white">Real-Time Market Analysis</h3>
+                    <h3 class="text-xl font-semibold text-white">Currency Market Context</h3>
                 </div>
                 <!-- TradingView Widget BEGIN -->
                 <div id="forex_heat_map" class="w-full h-96 bg-gray-800"></div>
@@ -1481,7 +1460,7 @@
             <!-- Trust Features -->
             <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-xl transition duration-300 transform hover:-translate-y-1 hover:shadow-blue-900/20">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-3">Our Trusted Reputation</h3>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-700 pb-3">What Guides Our Approach</h3>
                     <ul class="space-y-5">
                         <li class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
@@ -1490,8 +1469,8 @@
                                 </span>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-white font-medium">Globally Regulated</h4>
-                                <p class="text-gray-400 text-sm mt-1">Operating under strict financial regulations to ensure maximum security for your assets</p>
+                                <h4 class="text-white font-medium">Digital Art Focus</h4>
+                                <p class="text-gray-400 text-sm mt-1">Exploring the intersection of artistic expression and digital ownership</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -1501,8 +1480,8 @@
                                 </span>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-white font-medium">40+ International Awards</h4>
-                                <p class="text-gray-400 text-sm mt-1">Recognition for excellence in trading services, platform technology and customer support</p>
+                                <h4 class="text-white font-medium">Creator Perspective</h4>
+                                <p class="text-gray-400 text-sm mt-1">Looking at the creative person and process behind a collection</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -1512,8 +1491,8 @@
                                 </span>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-white font-medium">24/7 Multilingual Support</h4>
-                                <p class="text-gray-400 text-sm mt-1">Expert assistance available around the clock in multiple languages</p>
+                                <h4 class="text-white font-medium">Investor Support</h4>
+                                <p class="text-gray-400 text-sm mt-1">A place to ask questions about the platform and your account</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -1523,8 +1502,8 @@
                                 </span>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-white font-medium">Segregated Client Funds</h4>
-                                <p class="text-gray-400 text-sm mt-1">Your investments are kept in separate accounts for maximum security</p>
+                                <h4 class="text-white font-medium">Ownership Awareness</h4>
+                                <p class="text-gray-400 text-sm mt-1">Understanding token ownership, artwork rights and investment terms</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -1534,13 +1513,13 @@
                                 </span>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-white font-medium">Personal Account Managers</h4>
-                                <p class="text-gray-400 text-sm mt-1">Dedicated professionals to guide your trading journey</p>
+                                <h4 class="text-white font-medium">Thoughtful Research</h4>
+                                <p class="text-gray-400 text-sm mt-1">Taking time to understand a collection before deciding</p>
                             </div>
                         </li>
                     </ul>
                     <div class="mt-8 text-center">
-                        <a href="login" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                        <a href="{{ route('why-us') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
                             Learn More
                             <svg class="ml-2 -mr-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -1572,7 +1551,7 @@
                 Simple Process
             </span>
             <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">How It Works</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Get started with trading in three simple steps</p>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Begin your digital art NFT investment journey in three steps</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1583,12 +1562,12 @@
                     <div class="flex justify-center mb-6">
                         <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">1</div>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-white mb-3">Deposit</h3>
+                    <h3 class="text-xl font-bold text-center text-white mb-3">Create an Account</h3>
                     <div class="flex justify-center mb-4">
                         <div class="h-1 w-20 bg-blue-500 mx-auto"></div>
                     </div>
                     <p class="text-gray-300 text-center mb-8">
-                        Open real account and add funds. We work with more than 20 payment systems for your convenience.
+                        Register with {{$settings->site_name}} and get familiar with your account.
                     </p>
                     <div class="mt-auto text-center">
                         <a href="register" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
@@ -1608,16 +1587,16 @@
                     <div class="flex justify-center mb-6">
                         <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">2</div>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-white mb-3">Trade</h3>
+                    <h3 class="text-xl font-bold text-center text-white mb-3">Explore & Research</h3>
                     <div class="flex justify-center mb-4">
                         <div class="h-1 w-20 bg-blue-500 mx-auto"></div>
                     </div>
                     <p class="text-gray-300 text-center mb-8">
-                        Trade any of 100 assets and stocks. Use technical analysis and trade the news for better results.
+                        Learn about digital art NFTs and review the information and terms for any investment.
                     </p>
                     <div class="mt-auto text-center">
-                        <a href="login" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
-                            Explore Markets
+                        <a href="{{ route('nfts') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                            Explore Art NFTs
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
@@ -1633,15 +1612,15 @@
                     <div class="flex justify-center mb-6">
                         <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">3</div>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-white mb-3">Withdraw</h3>
+                    <h3 class="text-xl font-bold text-center text-white mb-3">Review Your Choices</h3>
                     <div class="flex justify-center mb-4">
                         <div class="h-1 w-20 bg-blue-500 mx-auto"></div>
                     </div>
                     <p class="text-gray-300 text-center mb-8">
-                        Get funds easily to your bank card or e-wallet with our fast and secure withdrawal process.
+                        Decide whether an opportunity matches your goals, budget and expectations.
                     </p>
                     <div class="mt-auto text-center">
-                        <a href="login" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                        <a href="{{ route('why-us') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
                             Learn More
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1668,15 +1647,15 @@
 
 
 
-<!-- Premium Trading Experience Section -->
+<!-- A Digital Art Investment Perspective Section -->
 <section class="py-16 bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Freedom to Trade
+                A Creative Perspective
             </span>
-            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Trade What You Want, When You Want</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Experience unlimited trading possibilities with our comprehensive platform</p>
+            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Explore Art Beyond the Physical</h2>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Discover how digital creation brings a new dimension to art and investing</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -1685,15 +1664,15 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-900/20 rounded-xl transform rotate-1 group-hover:rotate-0 transition-all duration-300 opacity-70"></div>
                 <img src="temp/custom/img/commission-scheme-crypt1t1.png" alt="Trading Commission Scheme" class="relative z-10 rounded-xl w-full transform transition-all duration-500 group-hover:scale-105">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 p-4">
-                    <p class="text-sm text-blue-300 text-center">Competitive commission structure for all traders</p>
+                    <p class="text-sm text-blue-300 text-center">Explore the relationship between creativity and digital ownership</p>
                 </div>
             </div>
 
             <!-- Right: Content Column -->
             <div class="bg-gray-800 bg-opacity-80 rounded-xl border border-gray-700 hover:border-blue-600 p-8 shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-900/20">
-                <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-4">Premium Trading Experience</h3>
+                <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-4">A Digital Art Investment Perspective</h3>
                 <p class="text-gray-300 mb-6 leading-relaxed">
-                    One of the primary goals of {{$settings->site_name}} is to provide the best product in the market. Our relationships with leading tier one financial institutions mean deep liquidity and tighter spreads for Forex traders.
+                    At {{$settings->site_name}}, digital art is at the heart of our NFT investment direction. We invite you to explore the creative story behind a collection and build a considered understanding of its investment context.
                 </p>
                 <div class="space-y-4 mb-6">
                     <div class="flex items-start">
@@ -1702,7 +1681,7 @@
                                 <i class="fas fa-check text-blue-400 text-sm"></i>
                             </span>
                         </div>
-                        <p class="ml-3 text-gray-300">Trade Forex, Indices, Shares & Commodities</p>
+                        <p class="ml-3 text-gray-300">Explore original digital artwork and editions</p>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 mt-1">
@@ -1710,7 +1689,7 @@
                                 <i class="fas fa-check text-blue-400 text-sm"></i>
                             </span>
                         </div>
-                        <p class="ml-3 text-gray-300">Access global markets 24 hours / 7 days</p>
+                        <p class="ml-3 text-gray-300">Learn about token ownership and provenance</p>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 mt-1">
@@ -1718,7 +1697,7 @@
                                 <i class="fas fa-check text-blue-400 text-sm"></i>
                             </span>
                         </div>
-                        <p class="ml-3 text-gray-300">Multilingual customer support</p>
+                        <p class="ml-3 text-gray-300">Contact our team with your questions</p>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 mt-1">
@@ -1726,12 +1705,12 @@
                                 <i class="fas fa-check text-blue-400 text-sm"></i>
                             </span>
                         </div>
-                        <p class="ml-3 text-gray-300">Trade on the go on our mobile apps</p>
+                        <p class="ml-3 text-gray-300">Build your understanding at your own pace</p>
                     </div>
                 </div>
                 <div class="mt-6">
-                    <a href="login" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
-                        Learn About Our Commissions
+                    <a href="{{ route('why-us') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                        Discover Our Approach
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
@@ -1747,10 +1726,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12 text-center">
             <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Comprehensive Services
+                Start Exploring
             </span>
-            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Start Trading with {{$settings->site_name}}</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Everything you need for successful trading in one platform</p>
+            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Explore Art NFTs with {{$settings->site_name}}</h2>
+            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Make digital art the starting point of your NFT investment journey</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1759,49 +1738,49 @@
                 <div class="w-14 h-14 bg-blue-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-chart-line text-blue-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Market Analysis</h3>
+                <h3 class="text-xl font-bold text-white mb-4">Art Research</h3>
                 <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Daily Market Analysis</span>
+                        <span>Creator Background</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Weekly Live Webinars</span>
+                        <span>Collection Context</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Live Q & A Sessions</span>
+                        <span>Ownership History</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Trading Strategy Support</span>
+                        <span>Artwork Details</span>
                     </li>
                 </ul>
             </div>
 
-            <!-- Award-Winning Broker Card -->
+            <!-- Digital Art Perspective Card -->
             <div class="bg-gray-800 bg-opacity-80 rounded-xl border border-gray-700 hover:border-blue-600 p-6 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-900/20 h-full">
                 <div class="w-14 h-14 bg-blue-600 bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                     <i class="fas fa-trophy text-blue-400 text-xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Award-Winning Broker</h3>
+                <h3 class="text-xl font-bold text-white mb-4">Digital Art Perspective</h3>
                 <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>42+ Industry Awards</span>
+                        <span>Creative Expression</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Top 100 Companies</span>
+                        <span>Digital Originals</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Best Client Funds Security Global</span>
+                        <span>Art Editions</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Best Forex News & Analysis Provider</span>
+                        <span>Generative Art</span>
                     </li>
                 </ul>
             </div>
@@ -1815,27 +1794,27 @@
                 <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>BA Copy - How it Works</span>
+                        <span>Understand the Terms</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Become a Follower</span>
+                        <span>Explore Art NFTs</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>PAMM Ranking</span>
+                        <span>Read the FAQs</span>
                     </li>
                     <li class="flex items-start">
                         <span class="flex-shrink-0 text-blue-400 mr-2">â€¢</span>
-                        <span>Become an Investor</span>
+                        <span>Create an Account</span>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="mt-12 text-center">
-            <a href="register" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
-                Start Trading Now
+            <a href="{{ route('nfts') }}" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg transition duration-300 transform hover:-translate-y-1">
+                Start Exploring
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -1844,331 +1823,15 @@
     </div>
 </section>
 
-
-
-
-
-
-
-</section>
-
-<!-- Client Testimonials Section -->
-<section class="py-16 bg-gray-900 relative overflow-hidden" x-data="{ activeTestimonial: null }">
-    <!-- Background Effects -->
-    <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5"></div>
-        <!-- Animated Grid Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="testimonial-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M0 40V0h40" fill="none" stroke="currentColor" stroke-width="0.5"/>
-                        <circle cx="20" cy="20" r="1" fill="currentColor"/>
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#testimonial-grid)"/>
-            </svg>
-        </div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="mb-12 text-center">
-            <span class="inline-block px-4 py-1 text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-900 bg-opacity-70 rounded-full shadow-lg">
-                Success Stories
-            </span>
-            <h2 class="mt-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">Client Testimonials</h2>
-            <p class="mt-3 text-gray-300 max-w-2xl mx-auto">Hear from our satisfied clients who have achieved impressive results with our platform</p>
-        </div>
-
-        <!-- Testimonials Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Testimonial 1 -->
-            <div class="relative group"
-                x-data="{ isHovered: false }"
-                @mouseenter="isHovered = true; activeTestimonial = 1"
-                @mouseleave="isHovered = false; activeTestimonial = null">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-emerald-400/20 rounded-2xl filter blur-xl transition-opacity duration-300"
-                    :class="{ 'opacity-75': isHovered, 'opacity-0': !isHovered }"></div>
-                <div class="relative h-full bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                            <svg class="w-8 h-8 text-blue-400 ml-auto opacity-20" fill="currentColor" viewBox="0 0 32 32">
-                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4zm12 0c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed text-sm">Since I started using {{$settings->site_name}}, I have been earning like never before. You guys have the best signals.</p>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="temp/custom/imge2.jpg" alt="Malcom47" class="w-10 h-10 rounded-full object-cover border-2 border-blue-500">
-                        <div class="ml-3">
-                            <h4 class="text-white font-semibold text-sm">Malcom47</h4>
-                            <p class="text-blue-400 text-xs">Verified Trader</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="relative group"
-                x-data="{ isHovered: false }"
-                @mouseenter="isHovered = true; activeTestimonial = 2"
-                @mouseleave="isHovered = false; activeTestimonial = null">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-400/20 rounded-2xl filter blur-xl transition-opacity duration-300"
-                    :class="{ 'opacity-75': isHovered, 'opacity-0': !isHovered }"></div>
-                <div class="relative h-full bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                            <svg class="w-8 h-8 text-emerald-400 ml-auto opacity-20" fill="currentColor" viewBox="0 0 32 32">
-                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4zm12 0c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed text-sm">I already got more than $200,000 within a month investing with {{$settings->site_name}}. Will again invest soon.</p>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="temp/custom/imge1.jpg" alt="Christy" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-500">
-                        <div class="ml-3">
-                            <h4 class="text-white font-semibold text-sm">Christy</h4>
-                            <p class="text-emerald-400 text-xs">Elite Investor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="relative group"
-                x-data="{ isHovered: false }"
-                @mouseenter="isHovered = true; activeTestimonial = 3"
-                @mouseleave="isHovered = false; activeTestimonial = null">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-emerald-400/20 rounded-2xl filter blur-xl transition-opacity duration-300"
-                    :class="{ 'opacity-75': isHovered, 'opacity-0': !isHovered }"></div>
-                <div class="relative h-full bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                            <svg class="w-8 h-8 text-blue-400 ml-auto opacity-20" fill="currentColor" viewBox="0 0 32 32">
-                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4zm12 0c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed text-sm">I was able to earn additional $30,000 to my profit. It's amazing, you guys are the best, keep it up.</p>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="temp/custom/imge3.jpg" alt="Linday8" class="w-10 h-10 rounded-full object-cover border-2 border-blue-500">
-                        <div class="ml-3">
-                            <h4 class="text-white font-semibold text-sm">Linday8</h4>
-                            <p class="text-blue-400 text-xs">Professional Trader</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 4 -->
-            <div class="relative group"
-                x-data="{ isHovered: false }"
-                @mouseenter="isHovered = true; activeTestimonial = 4"
-                @mouseleave="isHovered = false; activeTestimonial = null">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-blue-400/20 rounded-2xl filter blur-xl transition-opacity duration-300"
-                    :class="{ 'opacity-75': isHovered, 'opacity-0': !isHovered }"></div>
-                <div class="relative h-full bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                            </div>
-                            <svg class="w-8 h-8 text-emerald-400 ml-auto opacity-20" fill="currentColor" viewBox="0 0 32 32">
-                                <path d="M10 8c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4zm12 0c-3.3 0-6 2.7-6 6v10h6V14h-4c0-2.2 1.8-4 4-4z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 leading-relaxed text-sm">This was a very easy process and I received my funds quickly as I needed them! Highly recommend {{$settings->site_name}}.</p>
-                    </div>
-                    <div class="flex items-center">
-                        <img src="temp/custom/imge4.jpg" alt="Crian" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-500">
-                        <div class="ml-3">
-                            <h4 class="text-white font-semibold text-sm">Crian</h4>
-                            <p class="text-emerald-400 text-xs">Active Trader</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional testimonials collapsed section -->
-        <div x-data="{ showMore: false }" class="mt-8">
-            <template x-if="showMore">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <!-- Additional testimonials... -->
-
-                    <!-- Testimonial 5 -->
-                    <div class="relative bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <!-- More stars... -->
-                                </div>
-                            </div>
-                            <p class="text-gray-300 leading-relaxed text-sm">I rate {{$settings->site_name}} five stars because of the service, you register online, upload ID and you deposit and withdraw after trades. This is so lovely.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="temp/custom/imge5.jpg" alt="Claudia" class="w-10 h-10 rounded-full object-cover border-2 border-blue-500">
-                            <div class="ml-3">
-                                <h4 class="text-white font-semibold text-sm">Claudia</h4>
-                                <p class="text-blue-400 text-xs">Satisfied Investor</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 6 -->
-                    <div class="relative bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <!-- More stars... -->
-                                </div>
-                            </div>
-                            <p class="text-gray-300 leading-relaxed text-sm">I am very pleased with the customer service. Also online service is great and easy thank you {{$settings->site_name}} team.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="temp/custom/jenny.jpg" alt="Jenny" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-500">
-                            <div class="ml-3">
-                                <h4 class="text-white font-semibold text-sm">Jenny</h4>
-                                <p class="text-emerald-400 text-xs">Premium Member</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 7 -->
-                    <div class="relative bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <!-- More stars... -->
-                                </div>
-                            </div>
-                            <p class="text-gray-300 leading-relaxed text-sm">I'm happy, that in difficult times there are people that will support you and help you make more money, thank you {{$settings->site_name}} for giving me a chance.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="temp/custom/mike.jpg" alt="Mike" class="w-10 h-10 rounded-full object-cover border-2 border-blue-500">
-                            <div class="ml-3">
-                                <h4 class="text-white font-semibold text-sm">Mike</h4>
-                                <p class="text-blue-400 text-xs">Regular Investor</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 8 -->
-                    <div class="relative bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
-                        <div class="mb-6">
-                            <div class="flex items-center mb-4">
-                                <div class="flex text-yellow-400">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                    </svg>
-                                    <!-- More stars... -->
-                                </div>
-                            </div>
-                            <p class="text-gray-300 leading-relaxed text-sm">I've invested with {{$settings->site_name}} several times, always paid back on time. The entire trade process is complete in just a few days. Very impressed and satisfied.</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="temp/custom/kathy.jpg" alt="Kathy" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-500">
-                            <div class="ml-3">
-                                <h4 class="text-white font-semibold text-sm">Kathy</h4>
-                                <p class="text-emerald-400 text-xs">Long-term Client</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </template>
-
-            <!-- View More Button -->
-            <div class="text-center mt-12">
-                <button @click="showMore = !showMore"
-                    class="inline-flex items-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-emerald-400 text-white font-medium transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                    <span x-text="showMore ? 'Show Less' : 'View More Success Stories'"></span>
-                    <svg class="w-5 h-5 ml-2 transition-transform duration-300"
-                        :class="{ 'rotate-180': showMore }"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+<section class="py-16 bg-gray-900 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12 text-center"><h2 class="text-3xl font-bold text-white">Behind Every Art NFT</h2><p class="mt-3 text-gray-300">Four perspectives to bring to your digital art research</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700"><h3 class="text-lg font-semibold text-blue-400 mb-4">The Creative Story</h3><p class="text-gray-300 leading-relaxed text-sm">Look at the idea behind the work, its visual language and the artist who created it.</p></div>
+<div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700"><h3 class="text-lg font-semibold text-blue-400 mb-4">The Collection</h3><p class="text-gray-300 leading-relaxed text-sm">Understand whether a work belongs to a series, a limited edition or a wider creative project.</p></div>
+<div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700"><h3 class="text-lg font-semibold text-blue-400 mb-4">The Ownership Record</h3><p class="text-gray-300 leading-relaxed text-sm">Consider the token details and available history alongside the artwork itself.</p></div>
+<div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 border border-gray-700"><h3 class="text-lg font-semibold text-blue-400 mb-4">The Investment Context</h3><p class="text-gray-300 leading-relaxed text-sm">Bring together your goals, the terms and the information available before making a decision.</p></div>
+</div></div></section>
 
 <!-- Cryptocurrency Logos Section - Dark Mode -->
 <section class="bg-gray-900 py-10">

@@ -41,11 +41,9 @@
             </div>
             <h1 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl">
                 <span class="block">About {{$settings->site_name}}</span>
-                <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">We make trading available for everybody</span>
+                <span class="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">A New Perspective on Digital Art</span>
             </h1>
-            <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-300">
-                Discover our mission to become the world's most trusted trading platform through innovation, security, and exceptional service
-            </p>
+            <p class="max-w-2xl mt-5 mx-auto text-xl text-gray-300">Our focus is digital art NFT investment: connecting an appreciation for creative work with an understanding of digital ownership.</p>
         </div>
     </div>
 </section>
@@ -70,7 +68,7 @@
                         <img src="temp/custom/img/users.png" alt="Client Focus" class="w-10 h-10">
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">Client Focus</h3>
-                    <p class="text-gray-300 text-center">Providing best customer service is our primary value. More than 100 account managers are focused on needs of our clients.</p>
+                    <p class="text-gray-300 text-center">We put the questions and interests of digital art investors at the centre of our approach.</p>
                 </div>
             </div>
 
@@ -82,7 +80,7 @@
                         <img src="temp/custom/img/website.png" alt="Simplicity" class="w-10 h-10">
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">Simplicity</h3>
-                    <p class="text-gray-300 text-center">Everybody can become a trader with our easiest to use trading platform. {{$settings->site_name}} is available on all modern platforms: Web, Windows, MacOS, iPhone, iPad and Android.</p>
+                    <p class="text-gray-300 text-center">Clear explanations make it easier to explore NFTs, whether you are new to digital art or already familiar with collections.</p>
                 </div>
             </div>
 
@@ -93,8 +91,8 @@
                     <div class="w-20 h-20 mb-6 bg-blue-900 bg-opacity-30 rounded-full flex items-center justify-center">
                         <img src="temp/custom/img/speed.png" alt="Speed" class="w-10 h-10">
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Speed</h3>
-                    <p class="text-gray-300 text-center">We provide fastest trading using cutting-edge technologies. No delays in order executions and lags in user interface.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Creativity</h3>
+                    <p class="text-gray-300 text-center">We look beyond the token to the artwork, the artist and the creative story that brings a collection to life.</p>
                 </div>
             </div>
 
@@ -105,8 +103,8 @@
                     <div class="w-20 h-20 mb-6 bg-blue-900 bg-opacity-30 rounded-full flex items-center justify-center">
                         <img src="temp/custom/img/1497835.png" alt="Reliability" class="w-10 h-10">
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Reliability</h3>
-                    <p class="text-gray-300 text-center">Being industry leader we provide our clients with extra solidity. We are doing more than anyone else to satisfy needs of our clients.</p>
+                    <h3 class="text-xl font-bold text-white mb-4">Perspective</h3>
+                    <p class="text-gray-300 text-center">We value a thoughtful approach to investment, grounded in understanding the information and terms available.</p>
                 </div>
             </div>
         </div>
@@ -129,7 +127,7 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-white">Why is {{$settings->site_name}} One of the World's Most Trusted Brands?</h2>
+            <h2 class="text-3xl font-bold text-white">The {{$settings->site_name}} Approach</h2>
             <div class="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-blue-500 to-teal-400"></div>
         </div>
 
@@ -149,7 +147,7 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">Globally Regulated</p>
+                            <p class="text-lg font-medium text-white">Digital Art Focus</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -159,7 +157,7 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">40+ International Awards</p>
+                            <p class="text-lg font-medium text-white">Creator Perspective</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -169,7 +167,7 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">24/7 Multilingual Customer Support</p>
+                            <p class="text-lg font-medium text-white">Investor Support</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -179,7 +177,7 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">Segregated Client Funds</p>
+                            <p class="text-lg font-medium text-white">Ownership Awareness</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -189,7 +187,7 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">Personal Account Managers</p>
+                            <p class="text-lg font-medium text-white">Thoughtful Research</p>
                         </div>
                     </li>
                     <li class="flex items-start">
@@ -199,14 +197,14 @@
                             </svg>
                         </div>
                         <div class="ml-3">
-                            <p class="text-lg font-medium text-white">Consistently Tighter Spreads</p>
+                            <p class="text-lg font-medium text-white">Clear Investment Goals</p>
                         </div>
                     </li>
                 </ul>
 
                 <div class="mt-8">
-                    <a href="login" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200">
-                        Learn About Our Commissions
+                    <a href="{{ route('why-us') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200">
+                        Explore Our Approach
                         <svg class="ml-2 -mr-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -230,15 +228,9 @@
 
         <div class="bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-2xl border border-gray-700 shadow-xl overflow-hidden p-6 md:p-10">
             <div class="prose prose-lg prose-invert max-w-none">
-                <p>
-                    {{$settings->site_name}} has become one of the most reputable brokers in the industry, offering to traders CFDs across Forex, Equities, Commodities and Futures. Trading on the Forex market is a legitimate and straightforward way of generating income. And the good news is that you don't have to be a professional trader in order to make money. All you need is the right personality and the right skill set and you can make money trading on foreign exchanges.
-                </p>
-                <p>
-                    {{$settings->site_name}} lets you trade in the way that best suits you. Do you want to risk a little or a lot? Do you want gains in the short term or are you playing a longer game? Are you a day trader, a swing trader or a scalper? Are you an old hand or a rookie just testing the water? It does not matter because {{$settings->site_name}} puts you in control.
-                </p>
-                <p>
-                    If you can control today's success and not let it cloud tomorrow's judgment, you probably have it in you to make money as a currency trader. The prizes in Forex are certainly glittering but it is level headedness and persistence that win the day. With the right tools, information and access to all the world's currencies, {{$settings->site_name}} puts you in control of the trades you make.
-                </p>
+                <p>{{$settings->site_name}} is focused on the meeting point of digital art and NFT investment. Digital creation opens new ways to experience and collect art, while blockchain tokens introduce a distinct way to record digital ownership.</p>
+                <p>Our direction centres on the artwork and the people behind it. From individual digital originals to editions and generative collections, we believe the creative context deserves as much attention as the token itself.</p>
+                <p>We invite you to explore with curiosity and make decisions with care. Understand what an opportunity represents, read its terms and consider how it fits your own interests and goals.</p>
             </div>
         </div>
     </div>
@@ -265,22 +257,18 @@
             <!-- Right side: Content -->
             <div class="w-full lg:w-1/2 space-y-8">
                 <div>
-                    <h2 class="text-2xl font-bold text-white mb-4">STAY UP TO DATE WITH OUR EXPERTS!</h2>
-                    <p class="text-gray-300">
-                        Our local and international teams are here to support you on a 24/5 basis in more than 20 languages, while our wide range of payment methods gives you greater flexibility when it comes to deposits and withdrawals.
-                    </p>
+                    <h2 class="text-2xl font-bold text-white mb-4">EXPLORE DIGITAL ART WITH US</h2>
+                    <p class="text-gray-300">Have a question about digital art NFT investment or your account? Explore our learning pages or contact our team for help with your next step.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-white mb-4">Experience More Than Trading</h2>
-                    <p class="text-gray-300">
-                        Our success is centred around a number of core values. They include providing competitive brokerage fees through tight spreads, ensuring lightning-fast execution, access to advanced trading platforms with a wide range of products, and exceptional customer service.
-                    </p>
+                    <h2 class="text-2xl font-bold text-white mb-4">Discover More Than an Image</h2>
+                    <p class="text-gray-300">Digital art brings together creativity, cultural relevance and digital ownership. Our focus is on helping investors understand the artwork, the creator and the collection behind each NFT.</p>
                 </div>
 
                 <div class="pt-6">
                     <a href="register" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
-                        Start Trading Now
+                        Start Exploring
                         <svg class="ml-2 -mr-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

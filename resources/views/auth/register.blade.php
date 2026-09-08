@@ -27,7 +27,7 @@
                         Join <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{{ $settings->site_name }}</span>
                     </h1>
                     <p class="text-gray-300 text-sm sm:text-base lg:text-lg mb-6">
-                        Start your professional trading journey
+                        Begin your digital art NFT investment journey
                     </p>
 
                     <!-- Trading Stats - Mobile Responsive -->
@@ -49,9 +49,9 @@
                         <div class="text-center p-3 bg-gray-800/50 rounded-xl border border-gray-700/50">
                             <div class="flex items-center justify-center gap-1 text-cyan-400 mb-1">
                                 <i data-lucide="users" class="w-3 h-3"></i>
-                                <span class="font-semibold">1M+ Traders</span>
+                                <span class="font-semibold">Digital Art</span>
                             </div>
-                            <div class="text-gray-400">Community</div>
+                            <div class="text-gray-400">NFT Investment</div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg sm:text-xl font-bold text-white">Personal Information</h3>
-                                    <p class="text-gray-400 text-sm">Create your trading profile</p>
+                                    <p class="text-gray-400 text-sm">Create your investor profile</p>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                             <!-- Username Field -->
                             <div class="space-y-2">
                                 <label for="username" class="block text-sm font-bold text-gray-200">
-                                    Trading Username <span class="text-red-400">*</span>
+                                    Username <span class="text-red-400">*</span>
                                 </label>
                                 <div class="relative group">
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-4">
@@ -208,7 +208,7 @@
             </div>
             <div>
                 <h3 class="text-lg sm:text-xl font-bold text-white">Location & Preferences</h3>
-                <p class="text-gray-400 text-sm">Set your regional and trading preferences</p>
+                <p class="text-gray-400 text-sm">Set your region and investment preferences</p>
             </div>
         </div>
     </div>
@@ -307,7 +307,7 @@
             <i data-lucide="info" class="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0"></i>
             <div class="text-sm">
                 <p class="text-blue-300 font-bold mb-1">Regional & Preference Information</p>
-                <p class="text-gray-300">Your location and preferences help us tailor features, ensure compliance, and provide optimal trading conditions.</p>
+                <p class="text-gray-300">Your location and preferences help us understand your account and investment interests.</p>
             </div>
         </div>
     </div>
